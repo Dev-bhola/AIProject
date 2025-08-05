@@ -1,3 +1,3 @@
 # React +
 
-AI SAAS using PERN
+AI SAAS using PER

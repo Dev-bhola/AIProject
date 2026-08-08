@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+pdfplumber
+qdrant-client
+rank-bm25
+google-generativeai
+requests
+pandas

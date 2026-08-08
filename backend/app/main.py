@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from backend.app.api.router import api_router
 
-app = FastAPI(title="Legal RAG API")
-
+app = FastAPI(title="Legal RAG System")
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,3 +15,5 @@ app.add_middleware(
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+app.include_router(api_router, prefix="/api")

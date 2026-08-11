@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import QAView from './components/QAView';
 import SummaryView from './components/SummaryView';
+import DocumentsView from './components/DocumentsView';
 
 function App() {
   const [mode, setMode] = useState('qa'); // 'qa' or 'summarize'
@@ -42,11 +43,23 @@ function App() {
             >
               Summarize Document
             </button>
+            <button
+              onClick={() => setMode('documents')}
+              className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                mode === 'documents' 
+                  ? 'bg-blue-600 text-white shadow-md' 
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-700/50'
+              }`}
+            >
+              Browse Documents
+            </button>
           </div>
         </div>
         
         <div className="flex-1 w-full">
-          {mode === 'qa' ? <QAView /> : <SummaryView />}
+          {mode === 'qa' && <QAView />}
+          {mode === 'summarize' && <SummaryView />}
+          {mode === 'documents' && <DocumentsView />}
         </div>
         
       </main>

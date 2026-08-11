@@ -3,9 +3,10 @@ import QAView from './components/QAView';
 import SummaryView from './components/SummaryView';
 import DocumentsView from './components/DocumentsView';
 import AboutView from './components/AboutView';
+import GoldenSetView from './components/GoldenSetView';
 
 function App() {
-  const [mode, setMode] = useState('qa'); // 'qa', 'summarize', 'documents', 'about'
+  const [mode, setMode] = useState('qa'); // 'qa', 'summarize', 'documents', 'golden_set', 'about'
 
   return (
     <div className="flex h-screen bg-[#0a0a0a] text-zinc-100 font-sans selection:bg-zinc-700">
@@ -61,6 +62,20 @@ function App() {
             </svg>
             Browse Documents
           </button>
+
+          <button
+            onClick={() => setMode('golden_set')}
+            className={`w-full flex items-center gap-3 px-3 py-2 text-sm rounded-md transition-colors ${
+              mode === 'golden_set' 
+                ? 'bg-zinc-800 text-zinc-100 font-medium' 
+                : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900'
+            }`}
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Golden Set
+          </button>
         </nav>
 
         <div className="p-4 border-t border-zinc-800">
@@ -94,6 +109,7 @@ function App() {
             <option value="qa">Ask a Question</option>
             <option value="summarize">Summarize</option>
             <option value="documents">Documents</option>
+            <option value="golden_set">Golden Set</option>
             <option value="about">About</option>
           </select>
         </header>
@@ -102,6 +118,7 @@ function App() {
           {mode === 'qa' && <QAView />}
           {mode === 'summarize' && <SummaryView />}
           {mode === 'documents' && <DocumentsView />}
+          {mode === 'golden_set' && <GoldenSetView />}
           {mode === 'about' && <AboutView />}
         </div>
       </main>

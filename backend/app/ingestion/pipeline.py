@@ -7,7 +7,6 @@ from qdrant_client.models import Distance, VectorParams, PointStruct
 from rank_bm25 import BM25Okapi
 
 from backend.app.ingestion.chunker import chunk_page
-from backend.app.ingestion.embedder import embed_batch
 from backend.app.core.config import settings
 
 logging.basicConfig(level=logging.INFO)
@@ -70,7 +69,17 @@ def run_ingestion(parsed_dir: str):
     logger.info(f"Generated {len(all_chunks)} total chunks. Starting embedding...")
     
     chunk_texts = [c["text"] for c in all_chunks]
-    embeddings = embed_batch(chunk_texts)
+    
+    # HARDCODED LOCAL EMBEDDING FOR FAST INGESTION (0 API CALLS)
+    logger.info("Initializing fastembed locally for 384-dimensional vectors...")
+    from fastembed import TextEmbedding
+    model = TextEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    
+    embeddings = []
+    # fastembed returns a generator of numpy arrays
+    results = model.embed(chunk_texts)
+    for res in results:
+        embeddings.append(res.tolist())
     
     logger.info("Embedding complete. Upserting to Qdrant...")
     

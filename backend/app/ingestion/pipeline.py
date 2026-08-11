@@ -12,6 +12,41 @@ from backend.app.core.config import settings
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+def attach_parent_windows(chunks: list[dict], max_chars: int = 1500) -> list[dict]:
+    for i, chunk in enumerate(chunks):
+        current_len = len(chunk["text"])
+        window_texts = [chunk["text"]]
+        
+        left = i - 1
+        right = i + 1
+        
+        while current_len < max_chars and (left >= 0 or right < len(chunks)):
+            if right < len(chunks) and chunks[right]["section_title"] == chunk["section_title"]:
+                text_to_add = chunks[right]["text"]
+                if current_len + len(text_to_add) <= max_chars:
+                    window_texts.append(text_to_add)
+                    current_len += len(text_to_add)
+                    right += 1
+                else:
+                    right = len(chunks)
+            else:
+                right = len(chunks)
+                
+            if left >= 0 and chunks[left]["section_title"] == chunk["section_title"]:
+                text_to_add = chunks[left]["text"]
+                if current_len + len(text_to_add) <= max_chars:
+                    window_texts.insert(0, text_to_add)
+                    current_len += len(text_to_add)
+                    left -= 1
+                else:
+                    left = -1
+            else:
+                left = -1
+                
+        chunk["parent_section_text"] = f"Section: {chunk.get('section_title', 'Unknown')}\n\n" + "\n\n".join(window_texts)
+        
+    return chunks
+
 def run_ingestion(parsed_dir: str):
     qdrant_url = os.environ.get("QDRANT_URL")
     qdrant_api_key = os.environ.get("QDRANT_API_KEY")
@@ -51,16 +86,20 @@ def run_ingestion(parsed_dir: str):
         category = doc_data.get("category", "")
         
         last_section = "Unknown Section"
+        doc_chunks = []
         for page in doc_data.get("pages", []):
             page_number = page["page_number"]
             text = page["text"]
-            
+
             page_chunks, last_section = chunk_page(text, page_number, doc_id, last_section)
             
             for chunk in page_chunks:
                 chunk["source_file"] = source_file
                 chunk["category"] = doc_data.get("category", "")
-                all_chunks.append(chunk)
+                doc_chunks.append(chunk)
+                
+        doc_chunks = attach_parent_windows(doc_chunks, max_chars=1500)
+        all_chunks.extend(doc_chunks)
 
     if not all_chunks:
         logger.warning("No chunks generated. Is the parsed directory empty?")

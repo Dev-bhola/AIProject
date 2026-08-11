@@ -14,7 +14,7 @@ def content_agreement(generated_answer: str, ground_truth: str) -> bool | None:
     """Calls the LLM to verify if the generated answer conveys the same factual information as the ground truth."""
     import json
     import re
-    import ollama
+    import requests
     
     prompt = f"""
 You are a lenient factual judge. Determine if the Generated Answer conveys the same core factual information as the Ground Truth.
@@ -34,12 +34,30 @@ Ground Truth: "{ground_truth}"
 """
         
     try:
-        response = ollama.chat(
-            model="llama3.1:latest",
-            messages=[{"role": "user", "content": prompt}],
-            options={"temperature": 0.0}
-        )
-        response_text = response['message']['content'].strip()
+        from backend.app.core.config import settings
+        if settings.ENVIRONMENT == "local":
+            response = requests.post(
+                "http://127.0.0.1:11434/api/chat",
+                json={
+                    "model": "llama3.1",
+                    "messages": [{"role": "user", "content": prompt}],
+                    "stream": False,
+                    "options": {"temperature": 0.0}
+                },
+                timeout=120
+            )
+            response.raise_for_status()
+            response_text = response.json()['message']['content'].strip()
+        else:
+            import os
+            from groq import Groq
+            client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+            chat_completion = client.chat.completions.create(
+                messages=[{"role": "user", "content": prompt}],
+                model="llama-3.1-8b-instant",
+                temperature=0.0
+            )
+            response_text = chat_completion.choices[0].message.content.strip()
         
         match = re.search(r"```json\s*(.*?)\s*```", response_text, re.DOTALL)
         json_str = match.group(1) if match else response_text
@@ -61,7 +79,7 @@ def citation_grounded(generated_answer: str, marker: int, cited_chunk_text: str)
     """Calls the LLM to verify if the cited text genuinely supports the claim."""
     import json
     import re
-    import ollama
+    import requests
     
     prompt = f"""
 Look at the Generated Answer below, which contains citation markers like [{marker}].
@@ -79,12 +97,30 @@ Source Text: "{cited_chunk_text}"
 """
         
     try:
-        response = ollama.chat(
-            model="llama3.1:latest",
-            messages=[{"role": "user", "content": prompt}],
-            options={"temperature": 0.0}
-        )
-        response_text = response['message']['content'].strip()
+        from backend.app.core.config import settings
+        if settings.ENVIRONMENT == "local":
+            response = requests.post(
+                "http://127.0.0.1:11434/api/chat",
+                json={
+                    "model": "llama3.1",
+                    "messages": [{"role": "user", "content": prompt}],
+                    "stream": False,
+                    "options": {"temperature": 0.0}
+                },
+                timeout=120
+            )
+            response.raise_for_status()
+            response_text = response.json()['message']['content'].strip()
+        else:
+            import os
+            from groq import Groq
+            client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+            chat_completion = client.chat.completions.create(
+                messages=[{"role": "user", "content": prompt}],
+                model="llama-3.1-8b-instant",
+                temperature=0.0
+            )
+            response_text = chat_completion.choices[0].message.content.strip()
         
         match = re.search(r"```json\s*(.*?)\s*```", response_text, re.DOTALL)
         json_str = match.group(1) if match else response_text

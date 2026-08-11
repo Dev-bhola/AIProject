@@ -19,7 +19,7 @@ export default function SearchBar({ onSearch, isLoading }) {
       </div>
       <input
         type="text"
-        className="block w-full pl-12 pr-32 py-4 bg-slate-800/50 border border-slate-700/50 rounded-2xl text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-slate-800 transition-all shadow-lg backdrop-blur-sm"
+        className="block w-full pl-12 pr-28 py-3.5 bg-[#0a0a0a] border border-zinc-800 rounded-lg text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 transition-colors shadow-sm"
         placeholder="Ask a legal question (e.g., What is the objective of Milestone 1?)"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
@@ -28,7 +28,7 @@ export default function SearchBar({ onSearch, isLoading }) {
       <button
         type="submit"
         disabled={!query.trim() || isLoading}
-        className="absolute inset-y-2 right-2 px-6 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 text-white font-medium rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
+        className="absolute inset-y-1.5 right-1.5 px-4 bg-zinc-100 hover:bg-white disabled:bg-zinc-800 disabled:text-zinc-500 text-zinc-900 font-medium text-sm rounded-md transition-colors focus:outline-none cursor-pointer"
       >
         Search
       </button>

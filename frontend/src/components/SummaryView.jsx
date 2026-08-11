@@ -73,7 +73,7 @@ export default function SummaryView() {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="w-full max-w-4xl mx-auto flex flex-col gap-6 items-center bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl shadow-lg backdrop-blur-sm">
+      <div className="w-full max-w-4xl mx-auto flex flex-col gap-6 items-center bg-[#0a0a0a] border border-zinc-800 p-6 rounded-lg shadow-sm">
         
         {/* Document Selector */}
         <div className="w-full relative">
@@ -85,7 +85,7 @@ export default function SummaryView() {
               setSummaryError(null);
             }}
             disabled={isSummarizing || isLoadingDocs}
-            className="block w-full pl-4 pr-10 py-3 bg-slate-900/80 border border-slate-600/50 rounded-xl text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all appearance-none disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
+            className="block w-full pl-4 pr-10 py-3 bg-[#0a0a0a] border border-zinc-800 rounded-lg text-zinc-100 focus:outline-none focus:border-zinc-600 transition-colors appearance-none disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
           >
             <option value="" disabled>
               {isLoadingDocs ? 'Loading documents...' : 'Select a legal document'}
@@ -97,7 +97,7 @@ export default function SummaryView() {
             ))}
           </select>
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </div>
@@ -105,14 +105,14 @@ export default function SummaryView() {
 
         {/* PDF Preview Area */}
         {selectedDocId ? (
-          <div className="w-full flex flex-col border border-slate-600/50 rounded-xl overflow-hidden bg-slate-900/50">
-            <div className="flex items-center justify-between px-4 py-3 bg-slate-800/80 border-b border-slate-700/50">
-              <span className="text-sm text-slate-300 font-medium">Document: {selectedDocument?.source_file}</span>
+          <div className="w-full flex flex-col border border-zinc-800 rounded-lg overflow-hidden bg-[#0a0a0a]">
+            <div className="flex items-center justify-between px-4 py-3 bg-zinc-900/50 border-b border-zinc-800">
+              <span className="text-sm text-zinc-300 font-medium">Document: {selectedDocument?.source_file}</span>
               <a 
                 href={`${API_BASE_URL}/api/documents/${encodeURIComponent(selectedDocId)}/pdf`}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-xs text-blue-400 hover:text-blue-300 flex items-center transition-colors font-medium"
+                className="text-xs text-zinc-400 hover:text-zinc-200 flex items-center transition-colors font-medium"
               >
                 Open PDF in New Tab
                 <svg className="w-3.5 h-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,12 +120,12 @@ export default function SummaryView() {
                 </svg>
               </a>
             </div>
-            <div className="w-full h-[600px] overflow-y-auto bg-slate-900 flex flex-col items-center py-4">
+            <div className="w-full h-[600px] overflow-y-auto bg-zinc-950 flex flex-col items-center py-4">
               <Document
                 file={`${API_BASE_URL}/api/documents/${encodeURIComponent(selectedDocId)}/pdf`}
                 onLoadSuccess={onDocumentLoadSuccess}
                 loading={
-                  <div className="flex flex-col items-center justify-center h-full text-slate-400 py-20">
+                  <div className="flex flex-col items-center justify-center h-full text-zinc-500 py-20">
                     <LoadingState />
                     <span className="mt-4">Loading PDF document...</span>
                   </div>
@@ -137,14 +137,14 @@ export default function SummaryView() {
                 }
               >
                 {Array.from(new Array(numPages || 0), (el, index) => (
-                  <div key={`page_${index + 1}`} className="mb-6 shadow-xl border border-slate-700/50 bg-white">
+                  <div key={`page_${index + 1}`} className="mb-6 border border-zinc-300 bg-white shadow-sm">
                     <Page 
                       pageNumber={index + 1} 
                       renderTextLayer={false} 
                       renderAnnotationLayer={false}
                       className="max-w-full"
                     />
-                    <div className="text-center py-2 text-xs text-slate-500 bg-slate-100 border-t border-slate-200">
+                    <div className="text-center py-2 text-xs text-zinc-500 bg-zinc-100 border-t border-zinc-200">
                       Page {index + 1} of {numPages}
                     </div>
                   </div>
@@ -153,8 +153,8 @@ export default function SummaryView() {
             </div>
           </div>
         ) : (
-          <div className="w-full py-16 flex flex-col items-center justify-center border-2 border-dashed border-slate-700/70 rounded-xl bg-slate-900/30 text-slate-400">
-            <svg className="w-12 h-12 mb-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="w-full py-16 flex flex-col items-center justify-center border border-dashed border-zinc-700 rounded-lg bg-zinc-900/30 text-zinc-500">
+            <svg className="w-12 h-12 mb-4 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             <p className="text-sm font-medium">Select a document to preview it</p>
@@ -165,7 +165,7 @@ export default function SummaryView() {
         <button
           onClick={handleSummarize}
           disabled={!selectedDocId || isSummarizing || isLoadingDocs}
-          className="w-full py-3.5 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 text-white font-medium text-lg rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer shadow-md"
+          className="w-full py-3 bg-zinc-100 hover:bg-white disabled:bg-zinc-800 disabled:text-zinc-500 text-zinc-900 font-medium text-sm rounded-lg transition-colors focus:outline-none cursor-pointer"
         >
           {isSummarizing ? 'Analyzing Document...' : 'Summarize Document'}
         </button>
@@ -186,7 +186,7 @@ export default function SummaryView() {
       {isSummarizing && (
         <div className="mt-12">
           <LoadingState />
-          <p className="text-center text-slate-400 mt-4 animate-pulse">Analyzing legal document...</p>
+          <p className="text-center text-zinc-500 mt-4 animate-pulse">Analyzing legal document...</p>
         </div>
       )}
       

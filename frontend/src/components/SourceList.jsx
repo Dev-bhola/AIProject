@@ -8,29 +8,38 @@ export default function SourceList({ sources }) {
   const uniqueSources = Array.from(new Map(sources.map(s => [s.marker, s])).values());
   
   return (
-    <div className="w-full max-w-3xl mx-auto mt-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-      <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Sources Cited</h4>
-      <div className="grid gap-3 sm:grid-cols-2">
-        {uniqueSources.map((source) => (
-          <div 
-            key={source.marker} 
-            className="group flex flex-col p-4 bg-slate-800/40 rounded-xl border border-slate-700/60 hover:bg-slate-800/80 hover:border-blue-500/50 transition-all duration-300"
-          >
-            <div className="flex items-start gap-3 mb-2">
-              <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold ring-1 ring-blue-500/30 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                {source.marker}
-              </span>
+    <div className="w-full max-w-3xl mx-auto mt-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
+      <div className="bg-[#0a0a0a] border border-zinc-800 rounded-lg p-5 shadow-sm">
+        <h3 className="text-xs font-bold text-zinc-400 tracking-wider uppercase mb-3 flex items-center gap-1.5 border-b border-zinc-800 pb-3">Sources Cited</h3>
+        <div className="flex flex-col gap-2">
+          {uniqueSources.map((source, index) => (
+            <div 
+              key={index} 
+              className="bg-zinc-900/50 rounded-md p-3 border border-zinc-800 flex items-start gap-3 transition-colors hover:border-zinc-600"
+            >
+              <div className="flex-shrink-0 mt-0.5">
+                <span className="inline-flex items-center justify-center w-5 h-5 text-[10px] font-bold text-zinc-900 bg-zinc-300 rounded-full">
+                  {source.marker}
+                </span>
+              </div>
               <div className="flex-1 min-w-0">
-                <h5 className="text-sm font-semibold text-slate-200 truncate" title={source.source_file}>
-                  {source.source_file}
-                </h5>
-                <p className="text-xs text-slate-400 truncate mt-0.5">
-                  Page {source.page || "?"} • {source.section !== "Unknown Section" ? source.section : "Tax Document"}
-                </p>
+                <div className="flex items-center gap-2 mb-1">
+                  <h4 className="text-xs font-medium text-zinc-200 truncate" title={source.source_file}>
+                    {source.source_file}
+                  </h4>
+                  <span className="px-1.5 py-0.5 text-[9px] font-medium bg-zinc-800 text-zinc-400 rounded border border-zinc-700">
+                    Page {source.page || "?"}
+                  </span>
+                </div>
+                {source.section && source.section !== "Unknown Section" && (
+                  <p className="text-[10px] text-zinc-500 mb-1">
+                    Section: {source.section}
+                  </p>
+                )}
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

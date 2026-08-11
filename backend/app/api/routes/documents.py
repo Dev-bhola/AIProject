@@ -9,6 +9,7 @@ router = APIRouter()
 class DocumentInfo(BaseModel):
     doc_id: str
     source_file: str
+    category: str
 
 @router.get("/documents", response_model=list[DocumentInfo])
 def get_documents():
@@ -22,12 +23,13 @@ def get_documents():
     for chunk in corpus:
         doc_id = chunk.get("doc_id")
         source_file = chunk.get("source_file")
+        category = chunk.get("category", "Unknown")
         if doc_id and source_file and doc_id not in unique_docs:
-            unique_docs[doc_id] = source_file
+            unique_docs[doc_id] = {"source_file": source_file, "category": category}
             
     # Sort alphabetically by source_file
     sorted_docs = sorted(
-        [DocumentInfo(doc_id=doc_id, source_file=source_file) for doc_id, source_file in unique_docs.items()],
+        [DocumentInfo(doc_id=doc_id, source_file=info["source_file"], category=info["category"]) for doc_id, info in unique_docs.items()],
         key=lambda x: x.source_file.lower()
     )
     

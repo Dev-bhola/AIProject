@@ -112,8 +112,7 @@ def chunk_page(text: str, page_number: int, doc_id: str, last_section: str = "Un
             "page_number": page_number,
             "text": chunk_text.strip(),
             "chunk_index": index,
-            "section_title": current_section,
-            "parent_section_text": f"Section: {current_section}\n\n{chunk_text.strip()}"
+            "section_title": current_section
         })
         
     return final_chunks, current_section

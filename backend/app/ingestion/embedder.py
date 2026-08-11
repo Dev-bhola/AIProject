@@ -1,5 +1,3 @@
-from sentence_transformers import SentenceTransformer
-
 # Load the model once globally so it doesn't reload on every call
 # all-MiniLM-L6-v2 is fast, lightweight, and creates 384-dimensional embeddings
 _model = None
@@ -9,6 +7,7 @@ from backend.app.core.config import settings
 def _get_model():
     global _model
     if _model is None:
+        from sentence_transformers import SentenceTransformer
         # We can suppress the huggingface symlink warning if it happens, 
         # but it's just a warning.
         _model = SentenceTransformer(settings.EMBEDDING_MODEL)

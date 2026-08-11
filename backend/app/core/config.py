@@ -15,6 +15,7 @@ class Settings:
     CHUNK_SIZE = 900
     CHUNK_OVERLAP = 150
     RRF_K = 60
+    ENVIRONMENT = os.environ.get("ENVIRONMENT", "production")
     CORS_ORIGINS = os.environ.get("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
 
 settings = Settings()

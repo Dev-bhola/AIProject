@@ -6,7 +6,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Court in Rowley declined to establish any one test for determining the adequacy of educational benefits under the Act [1].",
+    "generated_answer": "The Court in Rowley declined to establish any one test for determining the adequacy of educational benefits under the Act. [1]",
     "retrieved_chunks": [
       {
         "source": "USREPORTS-580-386.pdf",
@@ -42,49 +42,49 @@
     "query": "What did the Supreme Court decide in Roe v. Wade?",
     "ground_truth": "Not answerable from provided documents",
     "is_unanswerable": true,
-    "retrieval_hit": false,
-    "content_agreement": false,
+    "retrieval_hit": true,
+    "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "I could not find any information about the case of Roe v. Wade in the provided documents, specifically [1], [2], [3], or [4].",
+    "generated_answer": "I could not find the answer in the provided legal sources.",
     "retrieved_chunks": [
       {
-        "source": "tischmak_v._tax_commission.pdf",
-        "page": 9,
-        "text": "Utah that create domicile, that domicile is automatically and\nirrebuttably imputed to the nonresident spouse.\u201d Beyond that,\nTischmak does not develop this constitutional argument.\n\u00b631 The U.S. Supreme Court has made clear that, even though\n\u201c[t]he word \u2018travel\u2019 is not found in the text of the Constitution . . .\nthe constitutional right to travel from one State to another is firmly\nembedded in [the Court\u2019s] jurisprudence.\u201d Saenz v. Roe, 526 U.S.\n489, 498 (1999) (cleaned up). The Court has recognized three\ncomponents of the right to travel:\n(1) the right to go from one place to another, by using\nhighway facilities and other instrumentalities of\ninterstate commerce, which includes the right to cross\nstate borders while en route; (2) the right to be treated\nas a welcome visitor rather than an unfriendly alien\nwhen temporarily present in the second State; and"
+        "source": "USREPORTS-580-285.pdf",
+        "page": 1,
+        "text": "judge's investigation. The state postconviction court denied relief, and\nthe Nevada Supreme Court affrmed, reasoning that Rippo was not enti-\ntled to discovery or an evidentiary hearing because his allegations did\nnot support an assertion of actual bias.\nHeld: The Nevada Supreme Court applied the wrong legal standard. Re-\ncusal is required when, objectively speaking, \u201cthe probability of actual\nbias on the part of the judge or decisionmaker is too high to be constitu-\ntionally tolerable.\u201d Withrow v. Larkin, 421 U. S. 35, 47. This Court's\ndecision in Bracy v. Gramley, 520 U. S. 899, is not to the contrary.\nCertiorari granted; 132 Nev. 95, 368 P. 3d 729, vacated and remanded.\nPer Curiam.\nA Nevada jury convicted petitioner Michael Damon Rippo\nof frst-degree murder and other offenses and sentenced him\nto death. During his trial, Rippo received information that"
       },
       {
-        "source": "n.c._dept_of_revenue_v._graybar_elec._co._1.pdf",
-        "page": 8,
-        "text": "II.\nLEGAL STANDARD\n17. When the trial court \u201cexercises judicial review over an agency\u2019s final\ndecision, it acts in the capacity of an appellate court.\u201d Meza v. Div. of Soc. Servs., 364\nN.C. 61, 75, 692 S.E.2d 96, 105 (2010) (quoting N.C. Dep\u2019t of Env\u2019t & Nat. Res. v.\nCarroll, 358 N.C. 649, 662, 599 S.E.2d 888, 896 (2004)).\n18. Chapter 150B of the North Carolina General Statutes provides that \u201c[t]he\ncourt reviewing a final [agency] decision may affirm the decision or remand the case\nfor further proceedings.\u201d N.C. Gen. Stat. \u00a7 150B-51(b). \u201cIn reviewing a final decision\nin a contested case, the court shall determine whether the petitioner is entitled to the\nrelief sought in the petition based upon its review of the final decision and the official\nrecord.\u201d Id. \u00a7 150B-51(c).\n19. The Department appeals the Final Decision of the OAH granting summary"
+        "source": "USREPORTS-580-206.pdf",
+        "page": 1,
+        "text": "verdict. The Colorado Court of Appeals affrmed, agreeing that H. C.'s\nalleged statements did not fall within an exception to Rule 606(b). The\nColorado Supreme Court also affrmed, relying on Tanner v. United\nStates, 483 U. S. 107, and Warger v. Shauers, 574 U. S. 40, both of which\nrejected constitutional challenges to the federal no-impeachment rule as\napplied to evidence of juror misconduct or bias.\nHeld: Where a juror makes a clear statement indicating that he or\nshe relied on racial stereotypes or animus to convict a criminal defend-\nant, the Sixth Amendment requires that the no-impeachment rule give\nway in order to permit the trial court to consider the evidence of the\njuror's statement and any resulting denial of the jury trial guarantee.\nPp. 215\u2013219.\n(a) At common law jurors were forbidden to impeach their verdict,\neither by affdavit or live testimony. Some American jurisdictions"
       },
       {
-        "source": "n.c._dept_of_revenue_v._graybar_elec._co._1.pdf",
-        "page": 20,
-        "text": "have admonished that \u201c[w]hile opinions of the Attorney General are entitled to\n\u2018respectful consideration,\u2019 such opinions are not compelling authority[,]\u201d McLaughlin\nv. Bailey, 240 N.C. App. 159, 167\u201368, 771 S.E.2d 570, 577 (2015) (quoting Williams v.\nAlexander Cty. Bd. of Educ., 128 N.C. App. 599, 602, 495 S.E.2d 406, 408 (1998)). As\na result, the Court concludes that, as between the two, the Department\u2019s guidance,\nrather than the Attorney General\u2019s opinion, is the more persuasive and further\nsupports the Court\u2019s conclusion that the Dividends Graybar received constituted\n\u201cincome not taxable\u201d for purposes of section 105-130.8.\n41. Finally, the OAH found, and Graybar argues here, that the Bulletins did not\nprovide the public with notice of the Department\u2019s interpretation that dividends\ndeducted under the DRD are \u201cincome not taxable\u201d for purposes of section 105-"
+        "source": "USREPORTS-580-256.pdf",
+        "page": 6,
+        "text": "Cite as: 580 U. S. 256 (2017) 261\nOpinion of the Court\nthe Constitution's guarantee of due process\u201d because the\nclause was unconstitutionally vague. 576 U. S., at 606. We\nsubsequently granted his petition, vacated the judgment of\nthe Court of Appeals, and remanded for further consider-\nation in light of Johnson. Beckles v. United States, 576 U. S.\n1082 (2015).\nOn remand, petitioner argued that his enhanced sentence\nwas based on \u00a7 4B1.2(a)'s residual clause, which he contended\nwas unconstitutionally vague under Johnson. The Court of\nAppeals again affrmed. It noted that petitioner \u201cwas sen-\ntenced as a career offender based not on the ACCA's residual\nclause, but based on express language in the Sentencing\nGuidelines classifying [his] offense as a `crime of violence.' \u201d\n616 Fed. Appx. 415, 416 (2015) (per curiam). \u201cJohnson,\u201d the\nCourt of Appeals reasoned, \u201csays and decided nothing about"
       },
       {
-        "source": "1901404.pdf",
+        "source": "2025-09-25_R47679_df545388f704d28e5c7411a590b4bce0f19ef5ad.pdf",
         "page": 18,
-        "text": "attorney sought to withdraw as the plaintiffs\u2019 counsel. Ibid.\nSubsequently, the defendants filedapetition to enforce the settle-\nment, and the trial court granted the petition. Id. at 885-86.\nThe appellate court reversed the trial court\u2019senforcement ofthe\nsettlement against those plaintiffs who opposed the settlement on\nappeal. Id. at 888. The court, however, affirmed the judgment\nfor the plaintiffs who either approved the settlement or did not\nparticipate in the appeal. Ibid. In reaching its conclusion, the\ncourt first foundthat the record was \u201cadequate to indicate that the\nplaintiffs never consented to be bound by the majority.\u201d Id. at\n886. Second, the court concluded that enforcing the settlement\nagainst the dissenting plaintiffs would be \u201ccompletely at odds\u201d\nwith DR 5-106, observing that Hayes was \u201cremarkabl[y] similar[]\nto the instant case.\u201d Id. at 886-87."
+        "text": "what purpose USTR is supposed to exercise that authority. On the other hand, the Supreme Court\nhas allowed Congress to delegate broader authority to the President in the area of foreign affairs,\nreasoning that the President requires greater latitude in this field.141\nFor the time being, there does not appear to be any published case law discussing the scope of\nUSTR\u2019s powers under Section 2171(c)(1). It is possible that courts would decline to adjudicate\nthe question of whether Section 2171 authorized USTR to enter into trade agreements without\ncongressional approval, as courts have sometimes declined to decide cases involving the\npermissibility of international agreements on grounds that they present as a political question.142\nOn the other hand, courts might be willing to decide the scope of USTR\u2019s powers under Section"
       },
       {
-        "source": "1901404.pdf",
-        "page": 15,
-        "text": "15\neach client must individually consent to a settlement agreement\nafter the terms ofthe settlement are made known.\nIII.\nPursuant to the New Jersey Constitution, the Supreme\nCourt has \u201cjurisdiction over the admission to the practice of law\nand the discipline ofpersons admitted.\u201d N.J. Const. art. VI, \u00a7 2,\n\u00b63. In discharging that responsibility, this Court has sought to\nmaintain \u201cpublicconfidenceinthe judicial system.\u201d In re LiVolsi,\n85 N.J. 576, 585, 428 A.2d 1268 (1981). \u201cGiven the critical\nimportance of the constitutional power of this Court over the\npractice of law,\u201d ibid., this Court has promulgated Rules of\nProfessional Conduct that govern attorneys in New Jersey.\nThose rules \u201cserve as a road map for the conduct ofattorneys to\nguide them in their relationships with their clients, other attor\nneys, the courts, and the public.\u201d In re Greenberg, 155N.J. 138,"
+        "source": "USREPORTS-580-328.pdf",
+        "page": 14,
+        "text": "judicial system, the Supreme Court's understanding is controlling\u201d).\n6 See 60 Stat. 778; see also Aro Mfg. Co. v. Convertible Top Replacement\nCo., 377 U. S. 476, 505 (1964)."
       }
     ],
     "hit_index": -1,
-    "total_citations_checked": 4,
-    "grounded_citations": 4
+    "total_citations_checked": 0,
+    "grounded_citations": 0
   },
   {
     "query": "How is substantial value determined?",
     "ground_truth": "The organization determines whether the value of an item or benefit is substantial by using Revenue Procedures 90-12 and 92-49 and the inflation adjustment in Revenue Procedure 2024-40.",
     "is_unanswerable": false,
     "retrieval_hit": false,
-    "content_agreement": true,
+    "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "The substantial or gross valuation misstatement penalty under section 6695A of the Internal Revenue Code may apply if there is a valuation misstatement based on an appraisal, and the appraiser must include a statement in their declaration [4].",
+    "generated_answer": "I could not find the answer in the provided legal sources.",
     "retrieved_chunks": [
       {
         "source": "irs_publication_526_charitable_contributions.pdf",
@@ -113,8 +113,8 @@
       }
     ],
     "hit_index": -1,
-    "total_citations_checked": 1,
-    "grounded_citations": 1
+    "total_citations_checked": 0,
+    "grounded_citations": 0
   },
   {
     "query": "What type of payments are listed on Form 1120-POL?",
@@ -123,7 +123,7 @@
     "retrieval_hit": true,
     "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "On Form 1120-POL, the following types of payments or income are mentioned:\n\n* Interest [4]\n* Excess campaign funds transferred to an office account [4] (must be included in the officeholder's income)\n* Dividends received on contributed securities\n* Net gains realized on sales of contributed securities (are taxable and must be reported on Form 1120-POL)",
+    "generated_answer": "Payments listed on Form 1120-POL include transit pass [3], and employer-paid or reimbursed lodging, including faculty lodging [3]. Excess campaign funds transferred to an office account must also be included in the officeholder's income, which is reported on this form [4].",
     "retrieved_chunks": [
       {
         "source": "irs_publication_525_taxable_and_nontaxable_income.pdf",
@@ -152,8 +152,8 @@
       }
     ],
     "hit_index": 0,
-    "total_citations_checked": 1,
-    "grounded_citations": 1
+    "total_citations_checked": 2,
+    "grounded_citations": 2
   },
   {
     "query": "How often does the Secretary disseminate information under the pilot program?",
@@ -162,7 +162,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Secretary shall disseminate information described in paragraph (1)(A) under the pilot program no less than quarterly [1].",
+    "generated_answer": "According to Section 3 of the provided documents, the Secretary shall disseminate information described in paragraph (1)(A) under the pilot program no less than quarterly [1].",
     "retrieved_chunks": [
       {
         "source": "veterans_comprehensive_prevention_access_to_care_and_treatment_act_of.pdf",
@@ -201,7 +201,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "Payments of U.S. tax must be remitted to the IRS in U.S. dollars [1], and digital assets are not accepted [1, 2]. The options for making a payment electronically include IRS Direct Pay, which allows you to pay taxes from your bank account [2]. You can also use the Electronic Federal Tax Payment System, which is best suited for businesses [4]. Alternatively, you can mail your payment by check or money order [4].",
+    "generated_answer": "U.S. tax payments must be remitted to the IRS in U.S. dollars. Digital assets are not accepted. Payments can be made using any of the following options: [1] IRS Direct Pay, which allows taxes to be paid from a bank account and is free and secure with no sign-in required; [2] Electronic Federal Tax Payment System, which is best suited for businesses but requires enrollment; or [3] Check or Money Order, by mailing a payment.",
     "retrieved_chunks": [
       {
         "source": "irs_publication_501_dependents_standard_deduction_and_filing_informati.pdf",
@@ -240,7 +240,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "Some federal appellate courts have held that using the internet to transmit child sexually abusive material (CSAM) can satisfy the requirements of the pre-2008 jurisdictional language, specifically the \"commerce\" clause. [1] They consider such use as effectively satisfying the commerce requirements, even if it is just a transmission of images from one state to another through the global data transmission system that is the Internet. [2]\n\nHowever, other federal appellate courts have disagreed and held that mere internet use alone does not satisfy the commerce requirements of these provisions. For instance, in United States v. Schaefer, the Tenth Circuit examined the pre-2008 jurisdictional language and held that \"an Internet transmission, standing alone\" does not meet the commerce requirements. [2]",
+    "generated_answer": "Some federal appellate courts held that use of the internet to transmit CSAM could effectively satisfy the requirements of the pre-2008 jurisdictional language, commerce' language. [1] However, there is also a division among federal appellate courts as to whether mere internet use satisfies such statutes, with some holding that the government must prove that the online communication crossed state lines, not simply that it was made on the Internet. [3]",
     "retrieved_chunks": [
       {
         "source": "crime_the_commerce_clause_and_the_internet_everycrsreportcom.pdf",
@@ -318,7 +318,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The United States entered into 16 Free Trade Agreements (FTAs) between 1985 and 2020 [2].\n Between 1985 and 2020, the United States entered into several bilateral and regional FTAs [4].",
+    "generated_answer": "The United States has entered into 16 Free Trade Agreements (FTAs) between 1985 and 2020. [2]",
     "retrieved_chunks": [
       {
         "source": "2025-09-25_R47679_df545388f704d28e5c7411a590b4bce0f19ef5ad.pdf",
@@ -347,8 +347,8 @@
       }
     ],
     "hit_index": 0,
-    "total_citations_checked": 2,
-    "grounded_citations": 2
+    "total_citations_checked": 1,
+    "grounded_citations": 1
   },
   {
     "query": "What is required for a reverse QTIP election to be effective if GST exemption has been allocated to the trust?",
@@ -357,15 +357,15 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "According to [1] and [2], a reverse QTIP election can be made with respect to a trust executor, provided that GST exemption has been allocated to the trust. The election must be made prior to June 24, 1996, in order for the trust to be treated as two separate trusts, one having a value of 25% of the single trust and an inclusion ratio of zero.",
+    "generated_answer": "For a reverse QTIP election to be effective, the allocation of GST exemption to the trust must have a ratio of zero [1]. The executor may then elect to treat the trust as two separate trusts, one having a value of 25% and an inclusion ratio of one, and the other having a value of 75% and an inclusion ratio of zero [1,2]. This election must be made prior to June 24, 1996.",
     "retrieved_chunks": [
       {
-        "source": "CFR-2025-title26-vol16-sec26-2652-2.pdf",
+        "source": "CFR-2025-title26-vol16-sec26-2653-1.pdf",
         "page": 768,
         "text": "(c) Transitional rule. If a reverse QTIP $1 million of GST exemption to the trust. T\u2019s\nelection is made with respect to a trust executor may elect to treat the trust as two\nprior to December 27, 1995, and GST ex- separate trusts, one having a value of 25% of\nemption has been allocated to that the value of the single trust and an inclusion\nratio of zero, but only if the election is made\ntrust, the transferor (or the trans-\nprior to June 24, 1996. If the executor makes\nferor\u2019s executor) may elect to treat the\nthe transitional election, the other separate\ntrust as two separate trusts, one of trust, having a value of 75% of the value of\nwhich has a zero inclusion ratio by rea- the single trust and an inclusion ratio of\nson of the transferor\u2019s GST exemption one, is not treated as subject to the reverse\npreviously allocated to the trust. The QTIP election."
       },
       {
-        "source": "CFR-2025-title26-vol16-sec26-2653-1.pdf",
+        "source": "CFR-2025-title26-vol16-sec26-2652-2.pdf",
         "page": 768,
         "text": "(c) Transitional rule. If a reverse QTIP $1 million of GST exemption to the trust. T\u2019s\nelection is made with respect to a trust executor may elect to treat the trust as two\nprior to December 27, 1995, and GST ex- separate trusts, one having a value of 25% of\nemption has been allocated to that the value of the single trust and an inclusion\nratio of zero, but only if the election is made\ntrust, the transferor (or the trans-\nprior to June 24, 1996. If the executor makes\nferor\u2019s executor) may elect to treat the\nthe transitional election, the other separate\ntrust as two separate trusts, one of trust, having a value of 75% of the value of\nwhich has a zero inclusion ratio by rea- the single trust and an inclusion ratio of\nson of the transferor\u2019s GST exemption one, is not treated as subject to the reverse\npreviously allocated to the trust. The QTIP election."
       },
@@ -385,7 +385,7 @@
         "text": "illustrate the provisions of this para- had not been made (reverse QTIP elec-\ngraph (b): tion). An election under this section is\nirrevocable. An election under this sec-\nExample 1. Uniform gifts to minors transfers, tion is not effective unless it is made\nT transfers cash to an account in the name\nwith respect to all of the property in\nof T\u2019s child, C, as custodian for C\u2019s child, GC\n(who is a minor), under a state statute sub- the trust to which the QTIP election\nstantially similar to the Uniform Gifts to applies. See, however, \u00a726.2654\u20131(b)(1).\nMinors Act. For purposes of chapter 13, the Property that qualifies for a deduction\n767"
       }
     ],
-    "hit_index": 1,
+    "hit_index": 0,
     "total_citations_checked": 2,
     "grounded_citations": 2
   },
@@ -396,7 +396,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The CA5 issued its order on April 18, 2025. [2]",
+    "generated_answer": "The date the CA5 issued its order is April 18, 2025 [2].",
     "retrieved_chunks": [
       {
         "source": "examining_the_future_of_pfas_cleanup_and_disposal_policy_everycrsrepor.pdf",
@@ -474,7 +474,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The authority given to the Secretary concerned includes the power to determine both the \"validity\" of claims for CRSC payments and the \"amount due\" on each claim [1]. This grant of authority also allows the Secretary to waive or modify certain requirements, such as matching requirements or application requirements, if determined to be appropriate to the needs, culture, and circumstances of a particular Indian tribe or tribal organization [3].",
+    "generated_answer": "The statute confers upon \"[t]he Secretary concerned\" 1 authority to effect key determinations throughout this process [1]. This includes the power to determine both the \" `validity' \" of claims for CRSC payments and the \"amount due\" on each claim [4]. Specifically, the law gives the Secretary concerned the authority to pay each \"eligible\" claimant a \"monthly amount\" that is \"determined\" under the terms of the statute [4]. The power includes the ability to waive or modify requirements imposed by or under certain subsections if deemed appropriate to the needs, culture, and circumstances of the entity involved [3].",
     "retrieved_chunks": [
       {
         "source": "see_illinois_surety_co_v_united_states_ex_rel_peeler.pdf",
@@ -503,8 +503,8 @@
       }
     ],
     "hit_index": 3,
-    "total_citations_checked": 2,
-    "grounded_citations": 2
+    "total_citations_checked": 3,
+    "grounded_citations": 3
   },
   {
     "query": "What is the meaning of 'plausibly' in a complaint?",
@@ -513,7 +513,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "\"Plausibly\" does not mean \"probably,\" but \"it asks for more than a sheer possibility that a defendant has acted unlawfully.\" [2], citing Ashcroft v. Iqbal, 556 U. S. 662, 678 (2009).",
+    "generated_answer": "\"Plausibly\" does not mean \"probably,\" but it asks for more than a sheer possibility that a defendant has acted unlawfully. [2]",
     "retrieved_chunks": [
       {
         "source": "smith_wesson_brands_inc_et_al_v_estados.pdf",
@@ -552,7 +552,7 @@
     "retrieval_hit": true,
     "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "The maximum amount that can be excluded from state or local income tax varies based on the type of tax. For state and local general sales taxes, it appears to be limited to the excess of the tax you chose to deduct for that year over the tax you didn't choose to deduct for that year [2]. \n\nFor state and local income taxes, it is limited to the excess of the tax you chose to deduct for that year over the tax you didn't choose to deduct for that year. However, no specific maximum amount is mentioned in the provided documents [1].\n\nThe enhanced standard deduction for seniors does not directly apply to state or local income tax exclusions [4].",
+    "generated_answer": "The maximum amount that can be excluded from state or local income tax is not explicitly stated in the provided documents. However, [2] mentions that the excess of the tax you chose to deduct for a year over the tax you didn\u2019t choose to deduct for that year is subject to certain limitations, but it does not provide a specific maximum amount.\n\n[1] discusses state and local income taxes, but only in the context of determining which deduction to use for 2025, and [4] provides information on the standard deduction, but it does not address state or local income tax exclusions. \n\nI could not find the answer in the provided legal sources.",
     "retrieved_chunks": [
       {
         "source": "irs_publication_525_taxable_and_nontaxable_income.pdf",
@@ -591,7 +591,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "Qualified dividend income is defined as that amount which the taxpayer takes into account as investment income under section 163(d)(4)(B), but only to the extent the taxpayer elects to treat such income as investment income [1]. It also includes dividends from domestic corporations and qualified foreign corporations, except for certain dividends excluded under sections 501, 521, 591, 404(k) or meeting specific holding period requirements of section 246(c) [3].",
+    "generated_answer": "Qualified dividend income refers to amounts that are not included as investment income under section 163(d)(4)(B), as per [1].",
     "retrieved_chunks": [
       {
         "source": "Jobs and Growth Tax Relief Reconciliation Act of 2003.pdf",
@@ -620,8 +620,8 @@
       }
     ],
     "hit_index": 1,
-    "total_citations_checked": 2,
-    "grounded_citations": 2
+    "total_citations_checked": 1,
+    "grounded_citations": 1
   },
   {
     "query": "How many congressional commissions were identified through a search of Congress.gov?",
@@ -630,7 +630,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "According to [1] Document: congressional_commissions_overview_and_considerations_for_congress_eve.pdf | Section: SUMMARY | Page: 14, a total of 174 congressional commissions were identified through this search.",
+    "generated_answer": "A total of 174 congressional commissions were identified through this search [1].",
     "retrieved_chunks": [
       {
         "source": "congressional_commissions_overview_and_considerations_for_congress_eve.pdf",
@@ -669,7 +669,7 @@
     "retrieval_hit": false,
     "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "The amounts being rescinded vary, but some specific amounts mentioned include $150,000,000 [3], and an exception of $284,500,000 remaining available for necessary expenses associated with making awards announced prior to the enactment of this Act [3].",
+    "generated_answer": "The amounts being rescinded vary across different sections, but some specific amounts mentioned include $284,500,000 [3] and $150,000,000 [3]. Additionally, certain unobligated balances are being permanently rescinded, with no specific dollar amount specified.",
     "retrieved_chunks": [
       {
         "source": "fiscal_responsibility_act_of_2023.pdf",
@@ -708,7 +708,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "A person who violates subsection (b) and knows or has reasonable cause to believe that any firearm involved will be used to commit a felony, a Federal crime of terrorism, or a drug trafficking crime shall be sentenced to a term of imprisonment of not more than 25 years [1].",
+    "generated_answer": "The maximum term of imprisonment for a person who violates subsection (b) when they know or have reasonable cause to believe that any firearm involved will be used to commit a felony, a Federal crime of terrorism, or a drug trafficking crime is 25 years. [1]",
     "retrieved_chunks": [
       {
         "source": "bipartisan_safer_communities_act.pdf",
@@ -747,7 +747,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "A TRO (Temporary Restraining Order) against the Office of Management and Budget in Nat'l Council of Nonprofits v. Off. of Mgmt. & Budget, No. 25-239 was entered on February 3, 2025, as indicated by the case number 2025 WL 368852 [1].",
+    "generated_answer": "A temporary restraining order (TRO) against the Office of Management and Budget was entered on February 3, 2025, in Nat'l Council of Nonprofits v. Off. of Mgmt. & Budget, No. 25-239, as shown by the docket entry for 2025 WL 368852 ([1]).\n\nAdditionally, an administrative stay was entered before entering a TRO on January 28, 2025, in Nat'l Council of Nonprofits v. Off. of Mgmt. & Budget, No. 25-239 (2025 WL 314433) ([2]).",
     "retrieved_chunks": [
       {
         "source": "nationwide_injunctions_in_the_first_hundred_days_of_the_second_trump_a.pdf",
@@ -776,17 +776,17 @@
       }
     ],
     "hit_index": 0,
-    "total_citations_checked": 1,
-    "grounded_citations": 1
+    "total_citations_checked": 2,
+    "grounded_citations": 2
   },
   {
     "query": "How long has the rule against allowing jurors to testify about in-camera deliberations been in place?",
     "ground_truth": "For centuries.",
     "is_unanswerable": false,
     "retrieval_hit": false,
-    "content_agreement": true,
+    "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "The exact date when the rule against allowing jurors to testify about in-camera deliberations was established is not specified in the provided documents. However, it can be inferred that the federal approach to this issue has been well-established for a significant period, as [1] states that \"the Justice Department observed that '[s]trong policy considerations continue to support' the federal approach...\" and [4] notes that the rule was considered and approved by the Judicial Conference, appellate judges, and the Court itself.",
+    "generated_answer": "The federal approach, which prohibits jurors from testifying about their deliberations, has its roots in a revised draft of proposed rules of evidence for the United States Courts and Magistrates, dated October 1971 [2]. This revised draft was later approved by the Judicial Conference and sent to Congress. The rule was eventually adopted by this Court and referred to Congress [1].",
     "retrieved_chunks": [
       {
         "source": "USREPORTS-580-206.pdf",
@@ -825,7 +825,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "According to document [1], District courts impose a sentence within the Guidelines (or below the Guidelines based on a Government motion) over 80% of the time. Id., at 199; see 2015 Annual Report and 2015 Sourcebook of Federal Sentencing Statistics (20th ed.) (Figure G), online at http://www.ussc.gov/sites/default/files/pdf/research-and-publications/annual-reports-and-sourcebooks/2015/FigureG.pdf (as last visited Feb. 27, 2017).",
+    "generated_answer": "According to [1], in most cases, it is the range set by the Guidelines that specifies the number of years a defendant will spend in prison. District courts impose a sentence within the Guidelines (or below the Guidelines based on a Government motion) over 80% of the time.",
     "retrieved_chunks": [
       {
         "source": "USREPORTS-580-256.pdf",
@@ -864,7 +864,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Due Process Clause may sometimes demand recusal even when a judge \" `ha[s] no actual bias.'\" [1]",
+    "generated_answer": "The Due Process Clause may sometimes demand recusal, even when a judge \" `ha[s] no actual bias.'\" [1] Under our precedents, recusal is required when, objectively speaking, \u201cthe probability of actual bias on the part of the judge or decisionmaker is too high to be constitutionally tolerable.\u201d [1]",
     "retrieved_chunks": [
       {
         "source": "USREPORTS-580-285.pdf",
@@ -903,7 +903,7 @@
     "retrieval_hit": false,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "According to Table 5 in [3], approximately 26% of all returns and 28.3% of taxable returns have a size of estate under $11.4 million.",
+    "generated_answer": "According to Table 5 in [3], the distribution of assets in estates by size of estate shows that for all returns, approximately 26% of the estates have assets worth less than $11.4 million. Specifically, in the \"Under $11.4\" category, this percentage is listed as 26%.",
     "retrieved_chunks": [
       {
         "source": "The Estate and Gift Tax An Overview.pdf",
@@ -942,7 +942,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The value of controversy threshold for a trial by jury as per the Seventh Amendment is twenty dollars, according to [2]. This means that in suits at common law where the value in controversy exceeds twenty dollars, the right of trial by jury shall be preserved.",
+    "generated_answer": "The value of controversy threshold for a trial by jury as per the Seventh Amendment is twenty dollars. [2]",
     "retrieved_chunks": [
       {
         "source": "USREPORTS-580-206.pdf",
@@ -981,7 +981,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Administrator determines that a proposed project poses a low risk to the environment. [4]",
+    "generated_answer": "The Administrator determines that the proposed project poses a \"low risk\" to the environment, according to [4] Document: good_samaritan_remediation_of_abandoned_hardrock_mines_act_of_2024.pdf | Section: PUBLIC LAW 118\u2013155\u2014DEC. 17, 2024 138 STAT. 1697 | Page: 7, subsection (b)(1)(D).",
     "retrieved_chunks": [
       {
         "source": "fiscal_responsibility_act_of_2023.pdf",
@@ -1020,7 +1020,7 @@
     "retrieval_hit": false,
     "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "According to Table 1 in [2], there have been at least 7 constitutional points of order that the Senate voted on since 1989. These points of order include:\n\n* In the 101st Congress (113)\n* Amdt. 2786 to H.R. 3590 in the 111th Congress\n* Amdt. 2786 to H.R. 3590 in the 111th Congress\n* Amdt. 1365 to H.R. 2918 in the 111th Congress\n\nNote that Table 1 only presents data up to August 1, 2025 (119th Congress).",
+    "generated_answer": "According to Table 1 presented in [2], the Senate has voted on a total of 7 constitutional points of order from the 101st Congress to August 1, 2025 (119th Congress).",
     "retrieved_chunks": [
       {
         "source": "2025-11-26_R40948_e48177b6600db4a89af84c0c6ec18d8712472ef3.pdf",
@@ -1057,9 +1057,9 @@
     "ground_truth": "S is not treated as making a constructive addition to the trust by reason of the tax apportionment clause in S's will.",
     "is_unanswerable": false,
     "retrieval_hit": true,
-    "content_agreement": false,
+    "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "According to [1], in Example 8, it states that \"Constructive additions, S, the surviving spouse\" are made to the trust. This implies that the surviving spouse (S) is treated as making a constructive addition to the trust.",
+    "generated_answer": "A transfer to the custodial account is treated as a transfer to a trust, and under those circumstances, no right of recovery exists [1].",
     "retrieved_chunks": [
       {
         "source": "CFR-2025-title26-vol16-sec26-2652-2.pdf",
@@ -1096,9 +1096,9 @@
     "ground_truth": "the fair rental value of your out-of-pocket expenses of operating the car for your child\u2019s benefit",
     "is_unanswerable": false,
     "retrieval_hit": true,
-    "content_agreement": false,
+    "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "Capital items, such as furniture, appliances, and cars, bought for a person during the year can be included in total support under certain circumstances [1]. However, items like power lawn mowers are not considered support [1]. If you provide more than half of your spouse's stepparent's support, they may still qualify as your qualifying relative even if they don't live with you [2].",
+    "generated_answer": "You can include in total support certain capital items, such as furniture and appliances bought for a person during the year [1]. Additionally, the fair rental value of lodging provided to the person, or a share of the fair rental value of the entire dwelling if the person has use of your entire home, is considered support [2]. You can also include out-of-pocket expenses of operating a car for your child's benefit, but only in certain circumstances [2].",
     "retrieved_chunks": [
       {
         "source": "irs_publication_501_dependents_standard_deduction_and_filing_informati.pdf",
@@ -1137,7 +1137,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "In carrying out section (j)(1)(D) with respect to a proposed project on State or private land, the Administrator shall provide an opportunity for cooperating persons and the public to participate in the Good Samaritan permit process, including [i] carrying out environmental review and public comment procedures pursuant to subsection (l), as stated in [2], and [ii] a public hearing, if requested, as stated in [2].",
+    "generated_answer": "In carrying out section (j)(1)(D) with respect to a proposed project on State or private land, the Administrator shall provide an opportunity for cooperating persons and the public to participate in the Good Samaritan permit process, including [i] carrying out environmental review and public comment procedures pursuant to subsection (l), and [ii] a public hearing, if requested.",
     "retrieved_chunks": [
       {
         "source": "good_samaritan_remediation_of_abandoned_hardrock_mines_act_of_2024.pdf",
@@ -1166,8 +1166,8 @@
       }
     ],
     "hit_index": 0,
-    "total_citations_checked": 1,
-    "grounded_citations": 1
+    "total_citations_checked": 0,
+    "grounded_citations": 0
   },
   {
     "query": "How many maps are dated December 18, 2020?",
@@ -1176,7 +1176,7 @@
     "retrieval_hit": true,
     "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "According to the documents, there are numerous maps that are dated December 18, 2020. In [1], sections (8) through (11), as well as subsections (a) and (b), mention maps with this date. Similarly, in [2], sections (123) through (130) list maps with the same date. Additionally, in [3], sections (13) through (19) also contain maps dated December 18, 2020. However, a specific count of all these maps is not provided.",
+    "generated_answer": "The number of maps dated December 18, 2020 is 45. \n\nMap (7) from [2] and Map (126) from [3] both reference Assateague Island Unit VA\u201301P (4 of 4). However, the entire map title for Assawoman Island Unit VA\u201302P (1 of 3), dated December 18, 2020, is referenced in the same document.",
     "retrieved_chunks": [
       {
         "source": "bolstering_ecosystems_against_coastal_harm_act.pdf",
@@ -1205,8 +1205,8 @@
       }
     ],
     "hit_index": 4,
-    "total_citations_checked": 3,
-    "grounded_citations": 3
+    "total_citations_checked": 2,
+    "grounded_citations": 2
   },
   {
     "query": "What is the standard the District contends for injunctive relief and damages?",
@@ -1254,7 +1254,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "A Form 706GS(T) must be filed on or before the 15th day of the 4th month after the close of the calendar year in which the taxable termination occurred, or on or before the 10th month following the taxable termination. [3]",
+    "generated_answer": "A Form 706GS(T) must be filed on or before the 15th day of the 4th month after the close of the calendar year in which the taxable termination occurred, or on or before the 10th month following the taxable termination [3].",
     "retrieved_chunks": [
       {
         "source": "irs_publication_526_charitable_contributions.pdf",
@@ -1293,7 +1293,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "According to [2] Document: The Earned Income Tax Credit (EITC) An Overview.pdf | Section: CRS-17 | Page: 21, after errors in claiming an unqualified child, errors in income reporting accounted for 21.4% of the over-claims. Most frequent income reporting errors were underreporting of earned income and modified adjusted gross income.",
+    "generated_answer": "According to [2], after errors in claiming an unqualified child, errors in income reporting accounted for 21.4% of the over-claims. Most frequent income reporting errors were underreporting of earned income and modified adjusted gross income.",
     "retrieved_chunks": [
       {
         "source": "The Earned Income Tax Credit (EITC) An Overview.pdf",
@@ -1329,35 +1329,35 @@
     "query": "What is the minimum wage under the Fair Labor Standards Act?",
     "ground_truth": "Not answerable from provided documents",
     "is_unanswerable": true,
-    "retrieval_hit": false,
-    "content_agreement": false,
+    "retrieval_hit": true,
+    "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The minimum wage is the higher of\u2014\n\u2018\u2018(I) the minimum wage provided by section 6(a)(1)\nof the Fair Labor Standards Act of 1938 [29 U.S.C.\n206(a)(1)], without regard to any exemption;\nor \u2018\u2018(II) any applicable State or local minimum\nwage.",
+    "generated_answer": "I could not find the answer in the provided legal sources.",
     "retrieved_chunks": [
       {
-        "source": "USCODE-2023-title26-subtitleC.pdf",
-        "page": 127,
-        "text": "individual has received all regular compensation avail- State law to the extent that such provisions are not\nable to him based on employment or wages during his inconsistent with the provisions of subparagraphs (C)\nbase period, or (B) when his rights to such compensa- and (E); or\ntion have terminated by reason of the expiration of the \u2018\u2018(iv) if the position pays wages less than the higher\nbenefit year with respect to which such rights existed. of\u2014\n\u2018\u2018(2) Except where inconsistent with the provisions of \u2018\u2018(I) the minimum wage provided by section 6(a)(1)\nthis title, the terms and conditions of the State law of the Fair Labor Standards Act of 1938 [29 U.S.C.\nwhich apply to claims for regular compensation and to 206(a)(1)], without regard to any exemption; or\nthe payment thereof shall apply to claims for extended \u2018\u2018(II) any applicable State or local minimum"
+        "source": "2026-04-03_R48896_eeb95035f2bad58ea962bf3029d88846ea4f5354.pdf",
+        "page": 5,
+        "text": "National Labor Relations Board: Legal Background and Recent Challenges\nnation\u2019s economy.10 To achieve its purposes, the Act provides collective bargaining rights to\ncovered employees, prevents practices that could frustrate peaceful worker-employer\nrelationships, and creates mechanisms for workers and employers to resolve labor disputes.\nThe NLRB Board adjudicates labor representation disputes, complaints of unfair labor practices\n(ULPs), and contract disputes.11 The Board members generally serve five-year terms as laid out\nby the Act.12 For the Board to have a quorum, or the minimum number of members to exercise its\nfull authority, there must be at least three of five member seats filled.13 The Board has been\ntraditionally composed of two Democrats, two Republicans, and a fifth member belonging to the"
       },
       {
-        "source": "USCODE-2023-title26-subtitleC.pdf",
-        "page": 64,
-        "text": "2105 of Title 5, and enacted provisions set out as notes The amount of qualified wages with re-\nunder section 2601 of Title 29. Sections 102, 105, and 110 spect to any employee which may be taken\nof the Act are classified to sections 2612, 2615, and 2620, into account under subsection (a) by the eli-\nrespectively, of Title 29. For complete classification of\ngible employer for any calendar quarter\nthis Act to the Code, see Short Title note set out under\nshall not exceed $10,000.\nsection 2601 of Title 29 and Tables.\nSection 5102(a) of the Families First Coronavirus Re- (B) Recovery startup businesses\nsponse Act, referred to in subsec. (c)(2)(A)(i), is section\nIn the case of an eligible employer which\n5102(a) of Pub. L. 116\u2013127, which is set out in a note\nis a recovery startup business (as defined in\nunder section 2601 of Title 29, Labor."
+        "source": "Middle Class Tax Relief and Job Creation Act of 2012.pdf",
+        "page": 21,
+        "text": "PUBLIC LAW 112\u201396\u2014FEB. 22, 2012 126 STAT. 175\nan employer\u2019s contribution rate under section 3303(a)(1) of the\nInternal Revenue Code of 1986.\n(c) PAYMENTSTOSTATES.\u2014\n(1) IN GENERAL.\u2014There shall be paid to each State with\nan agreement under this section an amount equal to\u2014\n(A) one-half of the amount of short-time compensation\npaid to individuals by the State pursuant to such agree-\nment; and\n(B) any additional administrative expenses incurred\nby the State by reason of such agreement (as determined\nby the Secretary).\n(2) TERMS OF PAYMENTS.\u2014Payments made to a State under\nparagraph (1) shall be payable by way of reimbursement in\nsuch amounts as the Secretary estimates the State will be\nentitled to receive under this section for each calendar month,\nreduced or increased, as the case may be, by any amount\nby which the Secretary finds that the Secretary\u2019s estimates"
       },
       {
-        "source": "USCODE-2023-title26-subtitleC.pdf",
-        "page": 73,
-        "text": "3111(a), and 3111(b) of so much of the compensation paid\nwhich this provision was amended in 1965, or (i) $450, or\nin any calendar month to such employee representative\n(ii) an amount equal to one-twelfth of the current max-\nfor services rendered by him as was not in excess of an\nimum annual taxable \u2018wages\u2019 as defined in section 3121,\namount equal to one-twelfth of the current maximum\nwhichever is greater, for any month after the month in\nannual taxable \u2018\u2018wage\u2019\u2019 as defined in section 3121 for\nwhich this provision was so amended\u2019\u2019.\nany month.\nPub. L. 89\u201397 substituted \u2018\u2018the rate of the tax imposed\nPub. L. 98\u201376, \u00a7211(c), substituted \u2018\u201812.75 percent\u2019\u2019 for\nwith respect to wages by section 3101(a) at such time\n\u2018\u201811.75 percent\u2019\u2019.\n1981\u2014Subsec. (a). Pub. L. 97\u201334 substituted \u2018\u201811.75\u2019\u2019 for\nexceeds 23\u20444percent (the rate provided by paragraph (2)\nof section 3101 as amended by the Social Security"
+        "source": "Middle Class Tax Relief and Job Creation Act of 2012.pdf",
+        "page": 8,
+        "text": "existing nonproprietary standards, such as the eXtensible Markup\nLanguage.\u2019\u2019.\n42 USC 1111 (b) EFFECTIVEDATES.\u2014\nnote. (1) DATA EXCHANGE STANDARDS.\u2014The Secretary of Labor\nTime periods. shall issue a proposed rule under section 911(a)(1) of the Social\nSecurity Act (as added by subsection (a)) within 12 months\nafter the date of the enactment of this section, and shall issue\na final rule under such section 911(a)(1), after public comment,\nwithin 24 months after such date of enactment.\n(2) DATA REPORTING STANDARDS.\u2014The reporting standards\nrequired under section 911(b)(1) of such Act (as so added)\nshall become effective with respect to reports required in the\nfirst reporting period, after the effective date of the final rule\nreferred to in paragraph (1) of this subsection, for which the\nauthority for data collection and reporting is established or\nrenewed under the Paperwork Reduction Act."
       },
       {
-        "source": "USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf",
-        "page": 31,
-        "text": "American workers and improving equitable access to\nduction Act of 2022 (the \u2018\u2018Act\u2019\u2019) [see Tables for classi-\nthese jobs, including in traditional energy commu-\nfication], and to accelerate United States global leader-\nnities, through the timely implementation of the Act\u2019s\nship in clean energy innovation, manufacturing, and\nrequirements for prevailing wages and registered ap-\ndeployment in a way that cuts consumer energy costs,\nprenticeships and by focusing on high labor standards\ncreates well-paying union jobs and sustainable and eq-\nand the free and fair chance to join a union;\nuitable economic opportunity, advances environmental\njustice, and addresses the climate crisis, it is hereby or- (g) reducing energy costs for working families, busi-\ndered as follows: nesses, and governments at all levels while increasing"
+        "source": "Middle Class Tax Relief and Job Creation Act of 2012.pdf",
+        "page": 6,
+        "text": "outcomes described in paragraph (3) were achieved;\n\u2018\u2018(6) assurances that the State will provide any reports\nrelating to the demonstration project, after its approval, as\nthe Secretary of Labor may require; and\n\u2018\u2018(7) assurances that employment meets the State\u2019s suitable\nwork requirement and the requirements of section 3304(a)(5)\nof the Internal Revenue Code of 1986.\nWaiver authority. \u2018\u2018(c) The Secretary of Labor may waive any of the requirements\nof section 3304(a)(4) of the Internal Revenue Code of 1986 or of\nparagraph (1) or (5) of section 303(a), to the extent and for the\nperiod the Secretary of Labor considers necessary to enable the\nState to carry out a demonstration project under this section.\n\u2018\u2018(d) A demonstration project under this section\u2014\n\u2018\u2018(1) may be commenced any time after the date of enact-\nment of this section;"
       },
       {
-        "source": "USCODE-2023-title26-subtitleC.pdf",
-        "page": 72,
-        "text": "which this provision was amended in 1965, or (i) $450, or\n(ii) an amount equal to one-twelfth of the current max- (a) Tier 1 tax\nimum annual taxable \u2018wages\u2019 as defined in section 3121, In addition to other taxes, there is hereby im-\nwhichever is greater, for any month after the month in\nposed on the income of each employee represent-\nwhich this provision was so amended\u2019\u2019 in two places.\nSubsec. (c). Pub. L. 89\u2013212, \u00a72(a)(2), added subsec. (c). ative a tax equal to the applicable percentage of\n1963\u2014Subsec. (a). Pub. L. 88\u2013133 limited existing tax- the compensation received during any calendar\nable compensation base of $400 to any calendar month year by such employee representative for serv-\nbefore Nov. 1963 and increased such base to $450 for any ices rendered by such employee representative.\ncalendar month after Oct. 1963. For purposes of the preceding sentence, the term"
+        "source": "USREPORTS-580-256.pdf",
+        "page": 11,
+        "text": "Grayned, supra, at 108\u2013109 (\u201cA vague law impermissibly del-\negates basic policy matters\u201d to judges \u201cfor resolution on an\nad hoc and subjective basis\u201d). An unconstitutionally vague\nlaw invites arbitrary enforcement in this sense if it \u201cleaves\njudges and jurors free to decide, without any legally fxed\nstandards, what is prohibited and what is not in each particu-\nlar case,\u201d Giaccio, 382 U. S., at 402\u2013403, or permits them to\nprescribe the sentences or sentencing range available, cf.\nAlleyne, 570 U. S., at 112 (\u201c[T]he legally prescribed range is\nthe penalty affxed to the crime\u201d).\nThe Guidelines, however, do not regulate the public by\nprohibiting any conduct or by \u201cestablishing minimum and\nmaximum penalties for [any] crime.\u201d Mistretta, 488 U. S., at\n396 (Sentencing Guidelines \u201cdo not bind or regulate the\nprimary conduct of the public\u201d). Rather, the Guidelines"
       }
     ],
     "hit_index": -1,
@@ -1371,7 +1371,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Secretary shall approve a plan only if it meets certain requirements, including that the plan was developed jointly by the Secretary and the State, and the State consulted with [1] appropriate public and nonprofit private agencies; community-based organizations involved in providing services for children and families; parents with child welfare experience, foster parents, adoptive parents, and kinship caregivers; and children, youth, and young adults with experience in the child welfare system.",
+    "generated_answer": "The State must consult with [1] \"appropriate public and nonprofit private agencies,\" [2] \"community-based organizations involved in providing services for children and families in the areas of family preservation, family support, family reunification, foster care, kinship, and adoption promotion and support,\" [3] \"parents with child welfare experience, foster parents, adoptive parents, and kinship caregivers;\" and [4] \"children, youth, and young adults with experience in the child welfare system.\"",
     "retrieved_chunks": [
       {
         "source": "supporting_america.pdf",
@@ -1400,8 +1400,8 @@
       }
     ],
     "hit_index": 0,
-    "total_citations_checked": 1,
-    "grounded_citations": 1
+    "total_citations_checked": 4,
+    "grounded_citations": 4
   },
   {
     "query": "What are the requirements for obtaining a patent in the United States?",
@@ -1413,29 +1413,29 @@
     "generated_answer": "I could not find the answer in the provided legal sources.",
     "retrieved_chunks": [
       {
-        "source": "USCODE-2023-title26-subtitleC.pdf",
-        "page": 139,
-        "text": "United States, Each such general agent who in his capacity as\n(B) a partnership, if two-thirds or more of such is an employer within the meaning of sub-\nthe partners are residents of the United section (a) shall be subject to all the require-\nStates, ments imposed upon an employer under this\n(C) a trust, if all of the trustees are resi- chapter with respect to service which con-\ndents of the United States, or stitutes employment by reason of this sub-\n(D) a corporation organized under the laws section.\nof the United States or of any State. (o) Special rule in case of certain agricultural\nAn individual who is a citizen of the Common- workers\nwealth of Puerto Rico or the Virgin Islands (but\n(1) Crew leaders who are registered or provide\nnot otherwise a citizen of the United States)\nspecialized agricultural labor\nshall be considered, for purposes of this section,"
+        "source": "USREPORTS-580-328.pdf",
+        "page": 21,
+        "text": "e. g., United States v. New Orleans Pacifc R. Co., 248 U. S.\n507, 511 (1919) (considering whether an agreement \u201chad be-\ncome unenforceable by reason of inexcusable laches\u201d). We\noften read statutes as incorporating common-law meanings.\nSee Neder v. United States, 527 U. S. 1, 21 (1999). And here\nthere are good reasons for doing so. For one thing, the prin-\ncipal technical drafter of the Patent Act (in a commentary\nupon which this Court has previously relied, e. g., Warner-\nJenkinson Co. v. Hilton Davis Chemical Co., 520 U. S. 17, 28\n(1997)) stated that \u00a7 282 was meant to codify \u201cequitable de-\nfenses such as laches.\u201d P. Federico, Commentary on the\nNew Patent Act, 35 U. S. C. A. 1, 55 (West 1954). For an-\nother thing, there is a long history of prior case law that\nshows with crystal clarity that Congress intended the stat-\nute to keep laches as a defense.\nII"
       },
       {
-        "source": "p17.pdf",
-        "page": 8415,
-        "text": "For these and other useful items, go to IRS.gov/ TIP end of 2025, see Credit for Other De-\nForms. Form 8862 may be required. If your CTC (re- pendents (ODC), later.\nfundable or nonrefundable depending on the\nTaxpayer Identification tax year), ACTC, or ODC for a year after 2015 Adopted child. An adopted child is always\nwas denied or reduced for any reason other treated as your own child. An adopted child in-\nNumber Requirements than a math or clerical error, you must attach cludes a child lawfully placed with you for legal\nForm 8862 to your tax return to claim the CTC, adoption.\nYou must have a TIN by the due date of your ACTC, or ODC, unless an exception applies. If you are a U.S. citizen or U.S. national and\nreturn. If you, or your spouse if filing jointly, See Form 8862, and its instructions for more in- your adopted child lived with you all year as a"
+        "source": "USREPORTS-580-328.pdf",
+        "page": 25,
+        "text": "ments are not about patent damages cases. They do not\nclaim to encompass the problem at issue here. And they do\nnot prevent Congress from enacting a statute that, recogniz-\ning patent litigation's history, combines a statute of limita-\ntions with a laches defense. And that is what Congress has\ndone in the Patent Act.\nThe majority also tries to discredit the persuasiveness of\nthe pre-Patent Act case law authority. It goes through the\nlengthy list of decisions, fnding some judicial statements too\nvague, others just dicta, and still others having confused an\nequitable claim for \u201caccounting\u201d with a legal claim for \u201cdam-\nages.\u201d I agree that it has found weaknesses in the reason-\ning of some individual cases. But those weaknesses were\nnot suffcient to prevent a 1951 treatise writer from conclud-\ning, on the basis of the great weight of authority, that in"
       },
       {
-        "source": "p17.pdf",
-        "page": 8407,
-        "text": "nancial account statements, and other docu- Armed Forces reservist (member of a re- qualified expenses. For additional information,\nmentary evidence. For more information on re- serve component). You are a member of a see Educator Expenses in Pub. 529, Miscella-\ncordkeeping, see What Records Should I reserve component of the Armed Forces of the neous Deductions.\nKeep? in chapter 1. United States if you are in the Army, Navy, Ma-\nEducator expenses include amounts\nrine Corps, Air Force, or Coast Guard Reserve;\nTIP paid or incurred in 2025 for personal\nthe Army National Guard of the United States;\nprotective equipment, disinfectant, and\nor the Reserve Corps of the Public Health Serv-\nUseful Items ice. other supplies used for the prevention of the\nspread of coronavirus. For more information,\nYou may want to see:\nQualified performing artist. You are a see the instructions for Schedule 1 (Form"
+        "source": "USREPORTS-580-328.pdf",
+        "page": 19,
+        "text": "has been unreasonable, prejudicial delay in commencing suit.\nSee 1 D. Dobbs, Law of Remedies \u00a7 2.3(5), p. 89 (2d ed. 1993).\nThe question before us is whether a court can apply this\ndoctrine in a patent infringement action for damages\nbrought within the statute of limitations. The Court holds\nthat a court cannot. Laches, it says, is a \u201cgap-flling doc-\ntrine,\u201d generally applicable where there is no statute of limi-\ntations. But the 1952 Patent Act contains a statute of limi-\ntations. Hence there is \u201cno gap to fll.\u201d Ante, at 335.\nIn my view, however, the majority has ignored the fact\nthat, despite the 1952 Act's statute of limitations, there re-\nmains a \u201cgap\u201d to fll. See infra, at 347\u2013348. Laches flls\nthis gap. And for more than a century courts with virtual\nunanimity have applied laches in patent damages cases.\nCongress, when it wrote the 1952 statute, was aware of and"
       },
       {
-        "source": "p17.pdf",
-        "page": 8334,
-        "text": "all year. This exception also applies if the child Age Test try as a part of a school's regular course of\nwas lawfully placed with you for legal adoption classroom and practical training are considered\nand the child lived with you for the rest of the To meet this test, a child must be: full-time students.\nyear after placement. \u2022 Under age 19 at the end of the year and\nPermanently and totally disabled. Your child\nyounger than you (or your spouse if filing\nChild's place of residence. Children are usu- is permanently and totally disabled if both of the\njointly);\nally citizens or residents of the country of their following apply.\nparents. \u2022 A student under age 24 at the end of the\n\u2022 Your child can\u2019t engage in any substantial\nIf you were a U.S. citizen when your child year and younger than you (or your spouse gainful activity because of a physical or"
+        "source": "USREPORTS-580-328.pdf",
+        "page": 25,
+        "text": "patent cases, \u201c[l]aches . . . may be interposed in an action at\nlaw.\u201d 3 A. Deller, Walker on Patents 106 (Cum. Supp. 1951).\nIn any event, with all its efforts, the majority is unable to\nidentify a single case\u2014not one\u2014from any court of appeals\nsitting in law or in equity before the merger, or sitting after\nthe merger but before 1952, holding that laches could not\nbar a patent claim for damages. Furthermore, the majority"
       },
       {
-        "source": "p17.pdf",
-        "page": 3,
-        "text": "Page 3 of 142 Fileid: \u2026 ication-17/2025/a/xml/cycle02/source 13:47 - 20-Jan-2026\nThe type and rule above prints on all proofs including departmental reproduction proofs. MUST be removed before printing.\nWhat\u2019s New\nThis section summarizes important Main home was in the United direct deposit for any refunds. The eligible for an enhanced se-\ntax changes that took effect in States. If your main home (and IRS recommends paying electroni- nior deduction. Your deduc-\n2025. Most of these changes are spouse if filing a joint return) was in cally whenever possible. Options tion will be limited if your\ndiscussed in more detail the United States for over half of to pay electronically include using modified adjusted gross in-\nthroughout this publication. 2025, check the box on the front of your bank account with Direct Pay, come is more than $75,000"
+        "source": "USREPORTS-580-328.pdf",
+        "page": 22,
+        "text": "Cite as: 580 U. S. 328 (2017) 349\nBreyer, J., dissenting\n(1952) (stating that the \u201cmain purpose\u201d of the Patent Act was\n\u201ccodifcation and enactment\u201d of existing law); 98 Cong. Rec.\n9323 (1952) (drafter of the Act stating that it was generally\nintended to \u201ccodif[y] the present patent laws\u201d).\nNow consider the existing law that the Patent Act's draft-\ners intended the Act to refect. The decisions that fnd or\nsay or hold that laches can bar monetary relief in patent\ninfringement actions stretch in a virtually unbroken chain\nfrom the late 19th century through the Patent Act's enact-\nment in 1952. They number in the dozens and include every\nfederal appeals court to have considered the matter. (We\nhave found only two contrary decisions, both from the same\nDistrict Court: Thorpe v. Wm. Filene's Sons Co., 40 F. 2d\n269 (Mass. 1930); and Concord v. Norton, 16 F. 477 (CC\nMass. 1883).)."
       }
     ],
     "hit_index": -1,
@@ -1449,7 +1449,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The maximum new budget authority for advance appropriations in fiscal year 2025 is $28,852,000,000. [1] Document: fiscal_responsibility_act_of_2023.pdf | Section: PUBLIC LAW 118\u20135\u2014JUN. 3, 2023 137 STAT. 21, Page 13, subsection (2)(A).\n\nThe maximum new budget authority for advance appropriations in fiscal year 2026 is also $28,852,000,000, as it is the same amount specified for fiscal year 2025 under the same provision. [1] Document: fiscal_responsibility_act_of_2023.pdf | Section: PUBLIC LAW 118\u20135\u2014JUN. 3, 2023 137 STAT. 21, Page 13, subsection (2)(A).",
+    "generated_answer": "According to Section (2) of [1] Document: fiscal_responsibility_act_of_2023.pdf | Page: 13, the maximum new budget authority for advance appropriations in fiscal year 2025 is $28,852,000,000. Additionally, under Section (A) of the same document, this limit also applies to fiscal year 2026.",
     "retrieved_chunks": [
       {
         "source": "fiscal_responsibility_act_of_2023.pdf",
@@ -1488,7 +1488,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "You can change or cancel within 2 days of scheduled payment is stated on IRS.gov/DUT, which is mentioned in [3], but the exact information about changing or canceling with IRS Direct Pay is found in [1]. Therefore, you can change or cancel within 2 days of scheduled payment.",
+    "generated_answer": "You can change or cancel within 2 days of scheduled payment. [1]",
     "retrieved_chunks": [
       {
         "source": "irs_publication_523_selling_your_home.pdf",
@@ -1517,8 +1517,8 @@
       }
     ],
     "hit_index": 1,
-    "total_citations_checked": 2,
-    "grounded_citations": 2
+    "total_citations_checked": 1,
+    "grounded_citations": 1
   },
   {
     "query": "What is the typical function of a statute of limitations?",
@@ -1527,7 +1527,7 @@
     "retrieval_hit": false,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "A statute of limitations generally takes into account the fairness of permitting the adjudication of a particular plaintiff's claim by making a considered judgment about how much delay may occur after a plaintiff knows of a cause of action before the plaintiff must bring suit. It begins to run on the date that the claim accrues, not when the cause of action is discovered [2]. This is supported in Petrella, where it was written that \"[a] claim ordinarily accrues `when [a] plaintiff has a complete and present cause of action'\" [4].",
+    "generated_answer": "A statute of limitations generally serves as a mechanism to limit or bar claims that are filed after a specified period from the date a cause of action accrues [2] and typically begins to run when the plaintiff has a complete and present cause of action, not when they discover it. This allows courts to evaluate the reasonableness of a plaintiff's delay on a case-by-case basis under laches, and prevents plaintiffs from bringing suit an unreasonably long time after becoming aware of their claim [4].",
     "retrieved_chunks": [
       {
         "source": "see_illinois_surety_co_v_united_states_ex_rel_peeler.pdf",
@@ -1566,7 +1566,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Board shall develop and submit to the appropriate congressional committees an annual report, entitled \"Report to Congress on Future Fish Habitat Partnerships and Modifications\", at least once a year, specifically Not later than February 1 of the first fiscal year beginning after the date of enactment of this Act and each February 1 thereafter. [1]",
+    "generated_answer": "The Board shall develop and submit an annual report to the appropriate congressional committees not later than February 1 of the first fiscal year beginning after the date of enactment of this Act, and each February 1 thereafter [1].",
     "retrieved_chunks": [
       {
         "source": "america.pdf",
@@ -1605,7 +1605,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "30 days. [1]",
+    "generated_answer": "According to section (iv) of subsection [1], such payment may not be made until 30 days after the Director of OMB has notified the congressional committees described in subsection (d)(2)(C).",
     "retrieved_chunks": [
       {
         "source": "Middle Class Tax Relief and Job Creation Act of 2012.pdf",
@@ -1644,7 +1644,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "According to Barnes v. Gorman [3], 536 U.S. 181, 186 (2002), \"Just as a valid contract requires offer and acceptance of its terms, `[t]he legitimacy of Congress' power to legislate under the spending power . . . rests on whether the [recipient] voluntarily and knowingly accepts the terms of the \u201ccontract.\u201d",
+    "generated_answer": "According to [3] Document: a_j_t_by_and_through_her_parents_a_t_et_al_v_osseo_area_schools_indepe.pdf, page 21, Section SCHOOL DIST. NO. 279, a valid contract requires the offer and acceptance of its terms, as stated in Barnes v. Gorman, 536 U.S. 181, 186 (2002).",
     "retrieved_chunks": [
       {
         "source": "irs_publication_525_taxable_and_nontaxable_income.pdf",
@@ -1720,9 +1720,9 @@
     "ground_truth": "The statute's definition of 'reasonable accommodation' makes sense for current employees or applicants but not for retirees.",
     "is_unanswerable": false,
     "retrieval_hit": true,
-    "content_agreement": false,
+    "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The statute's definition of \"reasonable accommodation\" refers to things like \"job restructuring,\" modifying \"existing facilities used by employees,\" and altering \"training materials or policies.\" [1] Those kinds of accommodations make perfect sense when it comes to current employees or applicants.",
+    "generated_answer": "The statute's definition of \"reasonable accommodation\" refers to things like \"job restructuring,\" modifying \"existing facilities used by employees,\" and altering \"training materials or policies.\" [1] This definition makes perfect sense when it comes to current employees or applicants, but it is hard to see how it might apply to retirees who do not hold or seek a job.",
     "retrieved_chunks": [
       {
         "source": "stanley_v_city_of_sanford_florida.pdf",
@@ -1761,7 +1761,7 @@
     "retrieval_hit": false,
     "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "To request information from the IRS digitally, you must securely upload required documents online through IRS.gov. \n\nYou may be able to use the Document Upload Tool to respond digitally to eligible IRS notices and letters by securely uploading required documents on line through IRS.gov [1].",
+    "generated_answer": "To respond digitally to eligible IRS notices and letters by securely uploading required documents online through IRS.gov, you may need scans of your personal or financial information. This includes requests for personal identification numbers (PINs), passwords, or similar information for credit cards, banks, or other financial accounts [1]. Additionally, the Taxpayer Advocate Service notes that requests for personal or financial information should be made securely, and it recommends using IRS.gov/MobileFriendlyForms for more information about your options [3].",
     "retrieved_chunks": [
       {
         "source": "irs_publication_501_dependents_standard_deduction_and_filing_informati.pdf",
@@ -1790,18 +1790,28 @@
       }
     ],
     "hit_index": -1,
-    "total_citations_checked": 1,
-    "grounded_citations": 1
+    "total_citations_checked": 2,
+    "grounded_citations": 2
   },
   {
     "query": "How far does the state of Texas extend its jurisdiction over water?",
     "ground_truth": "Texas extends its jurisdiction over an area of nine nautical miles from the baseline.",
     "is_unanswerable": false,
     "retrieval_hit": true,
-    "content_agreement": true,
+    "content_agreement": false,
     "grounding_failures": [],
-    "generated_answer": "According to document [2], section SUMMARY, page 5, Texas extends its jurisdiction over water three \"marine leagues\" (nine nautical miles) from the baseline.",
+    "generated_answer": "I could not find the answer in the provided legal sources.",
     "retrieved_chunks": [
+      {
+        "source": "good_samaritan_remediation_of_abandoned_hardrock_mines_act_of_2024.pdf",
+        "page": 15,
+        "text": "requirements of subsection (c), the Administrator shall provide\nnotice and a copy of the application to\u2014\n(1) each local government with jurisdiction over a drinking\nwater utility, and each Indian tribe with reservation or off-\nreservation treaty rights to land or water, located downstream\nfrom or otherwise near a proposed remediation project that\nis reasonably anticipated to be impacted by the remediation\nproject or a potential release of contaminants from the aban-\ndoned hardrock mine site, as determined by the Administrator;\n(2) each Federal, State, and Tribal agency that may have\nan interest in the application; and\n(3) in the case of an abandoned hardrock mine site that\nis located partially or entirely on land owned by the United\nStates, the Federal land management agency with jurisdiction\nover that land.\n(l) ENVIRONMENTALREVIEWANDPUBLICCOMMENT.\u2014"
+      },
+      {
+        "source": "offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf",
+        "page": 4,
+        "text": "court challenges to early federal offshore wind energy permitting decisions; regulatory activity\nfollowing the Energy Policy Act of 2005 (EPAct) that clarified jurisdiction over permitting of\noffshore wind facilities;4 and recent developments with respect to the existing statutory and\nregulatory framework for offshore wind energy production.\nJurisdiction over the Ocean\nThe United States\u2019 authority over the oceans and its natural resources begins at the coast\u2014often\ncalled the \u201cbaseline\u201d in this context\u2014and generally extends 200 nautical miles out to sea. This is\nknown as the United States\u2019 Exclusive Economic Zone (EEZ). The first 12 nautical miles\ncomprise the U.S. territorial sea.5 Under the 1982 United Nations Convention on the Law of the\nSea6 (UNCLOS), a coastal nation may claim sovereignty over the air space, water, seabed, and"
+      },
       {
         "source": "america.pdf",
         "page": 32,
@@ -1810,27 +1820,17 @@
       {
         "source": "offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf",
         "page": 5,
-        "text": "12 Id. \u00a7 1301(a)(2). State jurisdiction typically extends three nautical miles (approximately 3.3 miles) seaward of the\ncoast or \u201cbaseline.\u201d Texas and the Gulf Coast of Florida have jurisdiction over an area extending three \u201cmarine\nleagues\u201d (nine nautical miles) from the baseline. Id. \u00a7 1301(a)(2).\n13 Id. \u00a7\u00a7 1314(a), 1311(a)(2).\n14 Id. \u00a7 1302.\n15 16 U.S.C. \u00a7\u00a7 1451\u20131465.\n16 Id. \u00a7 1455(d)(11).\n17 Coastal U.S. states and territories, including the Great Lakes states, are eligible to receive federal assistance for their\ncoastal zone management programs. All eligible coastal and Great Lakes states and territories except Alaska participate\nin the program. See Office For Coastal Management, Coastal Zone Management Programs, NAT\u2019L OCEANIC &\nATMOSPHERIC ADMIN., https://coast.noaa.gov/czm/mystate/ (last visited July 24, 2025).\n18 16 U.S.C. \u00a7 1452(1), (2).\n19 Id. \u00a7 1455(d)(2), (9)\u2013(12)."
-      },
-      {
-        "source": "offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf",
-        "page": 4,
-        "text": "court challenges to early federal offshore wind energy permitting decisions; regulatory activity\nfollowing the Energy Policy Act of 2005 (EPAct) that clarified jurisdiction over permitting of\noffshore wind facilities;4 and recent developments with respect to the existing statutory and\nregulatory framework for offshore wind energy production.\nJurisdiction over the Ocean\nThe United States\u2019 authority over the oceans and its natural resources begins at the coast\u2014often\ncalled the \u201cbaseline\u201d in this context\u2014and generally extends 200 nautical miles out to sea. This is\nknown as the United States\u2019 Exclusive Economic Zone (EEZ). The first 12 nautical miles\ncomprise the U.S. territorial sea.5 Under the 1982 United Nations Convention on the Law of the\nSea6 (UNCLOS), a coastal nation may claim sovereignty over the air space, water, seabed, and"
-      },
-      {
-        "source": "offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf",
-        "page": 5,
         "text": "Offshore Wind Energy Development: Legal Framework\nwaters in an area stretching three nautical miles from the shore in most places, and nine nautical\nmiles in others.12 States may regulate the coastal waters within their jurisdiction, subject to\nfederal regulation for \u201ccommerce, navigation, national defense, and international affairs\u201d and the\npower of the federal government to preempt state law.13 The remaining outer portions of waters\nover which the United States exercises jurisdiction are federal waters.14\nThus, the federal government has jurisdiction over the potential locations for offshore wind farms\nto the boundaries of its EEZ. The scope of this federal authority is discussed in greater detail later\nin this report.\nThe Coastal Zone Management Act and the Role of\nthe States\nStates play an important regulatory role when a wind energy project is proposed for construction"
       },
       {
-        "source": "good_samaritan_remediation_of_abandoned_hardrock_mines_act_of_2024.pdf",
-        "page": 15,
-        "text": "requirements of subsection (c), the Administrator shall provide\nnotice and a copy of the application to\u2014\n(1) each local government with jurisdiction over a drinking\nwater utility, and each Indian tribe with reservation or off-\nreservation treaty rights to land or water, located downstream\nfrom or otherwise near a proposed remediation project that\nis reasonably anticipated to be impacted by the remediation\nproject or a potential release of contaminants from the aban-\ndoned hardrock mine site, as determined by the Administrator;\n(2) each Federal, State, and Tribal agency that may have\nan interest in the application; and\n(3) in the case of an abandoned hardrock mine site that\nis located partially or entirely on land owned by the United\nStates, the Federal land management agency with jurisdiction\nover that land.\n(l) ENVIRONMENTALREVIEWANDPUBLICCOMMENT.\u2014"
+        "source": "2025-09-25_R47679_df545388f704d28e5c7411a590b4bce0f19ef5ad.pdf",
+        "page": 35,
+        "text": "USMCA for another 16 years.303 If each party confirms it wishes to extend the term, the term is\n\u201cautomatically\u201d extended.304 Otherwise, the parties meet again annually for additional joint\nreviews until either the agreement terminates or the parties decide to extend its term.305 If the\nparties unanimously confirm their intention to extend the agreement, the process resets, and the\nnext joint review occurs six years thereafter.306 (In addition to the joint review provision, USMCA\ncontains a withdrawal provision stating that any country may withdraw from the agreement by\nproviding six months\u2019 notice.307)\nAlthough USMCA provides that the \u201chead of government\u201d of each party (e.g., the U.S. President)\ncommunicates the party\u2019s intention whether or not to extend the agreement, it does not specify\nwhat role, if any, other parts of government must play in that decision, a question left to the"
       }
     ],
-    "hit_index": 1,
-    "total_citations_checked": 1,
-    "grounded_citations": 1
+    "hit_index": 3,
+    "total_citations_checked": 0,
+    "grounded_citations": 0
   },
   {
     "query": "What types of property interests can the Secretary of the Interior grant on the OCS?",
@@ -1839,7 +1839,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Secretary of the Interior is authorized to grant leases, easements, or rights-of-way on the Outer Continental Shelf (OCS) for certain activities, including wind energy development [1]. These grants are issued on a competitive basis, subject to limited exceptions [1]. The relevant property interest may only be granted if the permitted activities are consistent with the purposes specified by law [2].",
+    "generated_answer": "The Secretary of the Interior can grant leases, easements, or rights-of-way on the Outer Continental Shelf (OCS) for permitted activities that are consistent with the purposes specified by law. [1] However, these grants are contingent upon the property interests being issued on a competitive basis, subject to limited exceptions. [1] Additionally, the Secretary may impose \"such other requirements as the Secretary considers necessary to protect the interests of the public and the United States\" when granting these property interests. [2]",
     "retrieved_chunks": [
       {
         "source": "offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf",
@@ -1852,6 +1852,11 @@
         "text": "security, leaving the amount and the exact purposes to which any forfeited sums will be applied to\nthe Secretary\u2019s discretion.39 Further, in conjunction with the authority to require some form of\nfinancial assurance, the Secretary is empowered to impose \u201csuch other requirements as the\nSecretary considers necessary to protect the interests of the public and the United States.\u201d40 Thus\nthe Secretary, depending on how these authorities are exercised, may potentially regulate many\naspects of any industry that is permitted to operate on the OCS under this subsection of the\nOCSLA.\nEPAct also contained a provision expressly providing for a state consultative role in the\npermitting process. Section 388 requires the Secretary of the Interior to provide for coordination\nand consultation with a state\u2019s governor or the executive of any local government that may be"
       },
       {
+        "source": "irs_publication_526_charitable_contributions.pdf",
+        "page": 573,
+        "text": "A publicly supported charity is an organization of the\nMany of the requirements for a deduction on a National\ntype described in (1) under Types of Qualified Organiza-\nRegister building and a historic district building are the\ntions, earlier, that normally receives a substantial part of\nsame; however, there are additional requirements for a re-\nits support, other than income from its exempt activities,\nstriction on the exterior of a historic district building.\nfrom direct or indirect contributions from the general public\nTo claim a deduction for the donation of a restriction on\nor from governmental units.\nall or part of the interior or exterior of a National Register\nQualified real property interest. This is any of the fol- building or all or part of the interior of a historic district\nlowing interests in real property. building, you must include with your return:"
+      },
+      {
         "source": "america.pdf",
         "page": 20,
         "text": "134 STAT. 924 PUBLIC LAW 116\u2013188\u2014OCT. 30, 2020\nunder the grant program shall not exceed 50 percent of\nthe total cost of the project, as determined by the Secretary.\n(B) NON-DEPARTMENTOFTHEINTERIORSHARE.\u2014\n(i) IN GENERAL.\u2014The non-Department of the\nInterior share of the cost of a project funded under\nthe grant program may be provided in cash or in\nthe form of an in-kind contribution of services or mate-\nrials.\n(ii) OTHER FEDERAL FUNDING.\u2014Non-Department of\nthe Interior Federal funds may be used for not more\nthan 25 percent of the total cost of a project funded\nunder the grant program.\n(5) ADMINISTRATION.\u2014The Secretary may enter into an\nagreement to manage the grant program with an organization\nthat offers grant management services.\n(d) REPORTING.\u2014Not later than 180 days after the date of\nenactment of this Act, and annually thereafter, the Secretary shall"
@@ -1860,11 +1865,6 @@
         "source": "offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf",
         "page": 7,
         "text": "Offshore Wind Energy Development: Legal Framework\nSection 388 of EPAct addresses some of the uncertainty related to federal jurisdiction over\noffshore wind energy development by amending OCSLA to establish legal authority for federal\nreview and approval of various offshore energy-related projects. Section 388 authorizes the\nSecretary of the Interior, in consultation with other federal agencies, to grant leases, easements, or\nrights-of-way on the OCS for certain activities\u2014wind energy development among them\u2014not\nauthorized by other relevant statutes.27\nEPAct also makes clear that federal agencies with permitting authority under other federal laws\nretain their jurisdiction.28 Thus, offshore development continues to require a Corps permit\npursuant to the RHA. Federal agencies that take actions with respect to energy development must"
-      },
-      {
-        "source": "offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf",
-        "page": 8,
-        "text": "project\u201d are entitled to a revenue share.37 Thus more than one state may be eligible to receive a\nportion of these revenues, depending upon the location of a project.\nIn addition, EPAct authorized considerable regulation of impacts associated with offshore\ndevelopment. It required the Secretary to ensure that \u201cany activity under this subsection\u201d be\ncarried out in a manner that adequately addresses specified issues, including environmental\nprotection, safety, protection of U.S. national security, and protection of the rights of others to use\nthe OCS and its resources.38 It also established specific financial security requirements for\nprojects. The law requires the holder of a Section 388 property interest to \u201cprovide for the\nrestoration of the lease, easement, or right-of-way\u201d and to furnish a surety bond or other form of"
       }
     ],
     "hit_index": 0,
@@ -1881,29 +1881,29 @@
     "generated_answer": "I could not find the answer in the provided legal sources.",
     "retrieved_chunks": [
       {
-        "source": "USCODE-2023-title26-subtitleC.pdf",
-        "page": 69,
-        "text": "Stat. 1330\u2013296, provided that: \u2018\u2018The amendment made by that: \u2018\u2018The amendments made by sections 1 and 3 of"
+        "source": "USREPORTS-580-206.pdf",
+        "page": 2,
+        "text": "of justice was given new force and direction by the ratifcation of the\nCivil War Amendments. \u201c[T]he central purpose of the Fourteenth\nAmendment was to eliminate racial discrimination emanating from off-\ncial sources in the States.\u201d McLaughlin v. Florida, 379 U. S. 184, 192.\nTime and again, this Court has enforced the Constitution's guarantee"
       },
       {
-        "source": "p17.pdf",
-        "page": 9,
-        "text": "TIP may be to your advantage to do so. income includes gains, but not losses, reported on Form 8949 or Schedule D. Gross income from a\nSee Who Should File, later. business means, for example, the amount on Schedule C, line 7, or Schedule F, line 9. But, in figuring\ngross income, don\u2019t reduce your income by any losses, including any loss on Schedule C, line 7, or\nFile only one federal income tax return Schedule F, line 9.\n! for the year regardless of how many *** If you didn\u2019t live with your spouse at the end of 2025 (or on the date your spouse died) and your gross\nCAUTION jobs you had, how many Forms W-2 income was at least $5, you must file a return regardless of your age.\nyou received, or how many states you lived in\nIf either (1) or (2) applies, see the Instructions family situation. Your filing status is determined\nduring the year. Don\u2019t file more than one original"
+        "source": "nationwide_injunctions_in_the_first_hundred_days_of_the_second_trump_a.pdf",
+        "page": 13,
+        "text": "52 Judicial Overreach and Constitutional Limits on the Federal Courts: Hearing Before the H. Comm. on the Judiciary,\nSubcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet, 119th Cong. (2025); Rule by\nDistrict Judges II: Exploring Legislative Solutions to the Bipartisan Problem of Universal Injunctions: Hearing Before\nthe S. Comm. on the Judiciary, 119th Cong. (2025).\n53 H.R. 1526, 119th Cong. (2025).\n54 S. 1206, 119th Cong. (2025).\n55 H.R. 97, 119th Cong. (2025).\nCongressional Research Service 10"
       },
       {
-        "source": "USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf",
-        "page": 15,
-        "text": "Stat. 3015; Pub. L. 111\u2013312, title I, \u00a7101(a)(1), Dec. 17, Pub. L. 103\u201366, title XIII, \u00a713201(c), Aug. 10, 1993, 107\n2010, 124 Stat. 3298, which provided that all provisions Stat. 459, provided that: \u2018\u2018The amendments made by\nof, and amendments made by, Pub. L. 107\u201316 (except for this section [amending this section and sections 41, 63,\nsection 803 thereof (26 U.S.C. note prec. 101)) would not 68, 132, 151, 453A, 513, 531, and 541 of this title] shall\napply to taxable, plan, or limitation years beginning apply to taxable years beginning after December 31,\nafter Dec. 31, 2012, or, in the case of title V of Pub. L. 1992.\u2019\u2019\n107\u201316, to estates of decedents dying, gifts made, or gen- Pub. L. 103\u201366, title XIII, \u00a713202(c), Aug. 10, 1993, 107\neration skipping transfers, after Dec. 31, 2012, and that Stat. 461, provided that: \u2018\u2018The amendments made by"
+        "source": "irs_publication_502_medical_and_dental_expenses.pdf",
+        "page": 1,
+        "text": "ment-related work expenses and health insurance premi-\nums if you are self-employed.\nPub. 502 covers many common medical expenses but\nnot every possible medical expense. If you can\u2019t find the\nexpense you are looking for, refer to the definition of medi-\ncal expenses under What Are Medical Expenses, later.\nSee How To Get Tax Help near the end of this publica-\ntion for information about getting publications and forms.\nComments and suggestions. We welcome your com-\nments about this publication and suggestions for future\neditions.\nYou can send us comments through IRS.gov/\nFormComments. Or, you can write to the Internal Revenue\nService, Tax Forms and Publications, 1111 Constitution\nAve. NW, IR-6526, Washington, DC 20224.\nAlthough we can\u2019t respond individually to each com-\nment received, we do appreciate your feedback and will\nconsider your comments and suggestions as we revise"
       },
       {
-        "source": "tischmak_v._tax_commission.pdf",
-        "page": 11,
-        "text": "Cite as: 2025 UT 24\nOpinion of the Court\n\u00b637 Accordingly, Tischmak has not persuaded us that the\nDomicile Statute implicates the right to travel. Therefore, he has not\npersuaded us that it violates that right. See Hope, 9 F.4th at 528\n(\u201cUnder the Privileges or Immunities Clause, if the right to travel\nis not implicated, that is the end of the plaintiffs\u2019 claim. The\nchallenged law either is reviewed under strict scrutiny or not at\nall.\u201d).\nB. Substantive Due Process and Uniform Operation of Laws\nUnder the Utah Constitution\n\u00b638 Tischmak next contends that the Domicile Statute violates\nthe Utah Constitution\u2019s Due Process Clause and Uniform\nOperation of Laws Provision. UTAH CONST. art. I, \u00a7\u00a7 7, 24. The Due\nProcess Clause states that \u201c[n]o person shall be deprived of life,\nliberty or property, without due process of law.\u201d Id. art. I, \u00a7 7. And"
+        "source": "bipartisan_safer_communities_act.pdf",
+        "page": 26,
+        "text": "136 STAT. 1338 PUBLIC LAW 117\u2013159\u2014JUNE 25, 2022\n(3) title VI of the Civil Rights Act of 1964 (42 U.S.C.\n2000d et seq.);\n(4) title IX of the Education Amendments of 1972 (20\nU.S.C. 1681 et seq.); or\n(5) the Age Discrimination Act of 1975 (42 U.S.C. 6101\net seq.).\n(b) PROHIBITION ON FEDERALLY DEVELOPED, MANDATED, OR\nENDORSED CURRICULUM.\u2014Nothing in this subtitle or the amend-\nments made by this subtitle shall be construed to authorize any\nofficer or employee of the Federal Government to engage in an\nactivity otherwise prohibited under section 103(b) of the Department\nof Education Organization Act (20 U.S.C. 3403(b)).\nSubtitle D\u2014Amendment on ESEA Funding\nSEC. 13401. AMENDMENT ON ESEA FUNDING.\nSection 8526 of the Elementary and Secondary Education Act\nof 1965 (20 U.S.C. 7906) is amended\u2014\n(1) in paragraph (5), by striking \u2018\u2018or\u2019\u2019 after the semicolon;"
       },
       {
-        "source": "USCODE-2023-title26-subtitleC.pdf",
-        "page": 108,
-        "text": "3307, provided that: \u2018\u2018The amendments made by this 42; Pub. L. 111\u2013157, \u00a72(a)(1), (b), Apr. 15, 2010, 124 Stat.\nsection [amending section 2005 of Pub. L. 111\u20135, set out 1116; Pub. L. 111\u2013205, \u00a7\u00a72(a)(1), (b), (c), 3(a), 4, July 22,\nabove, and section 5 of Pub. L. 110\u2013449 and sections 4004 2010, 124 Stat. 2236\u20132238; Pub. L. 111\u2013312, title V,\nand 4007 of Pub. L. 110\u2013252, set out below] shall take ef- \u00a7501(a)(1), (b), Dec. 17, 2010, 124 Stat. 3307; Pub. L. 112\u201378,\nfect as if included in the enactment of the Unemploy- title II, \u00a7201(a)(1), (b), Dec. 23, 2011, 125 Stat. 1282, 1283;\nment Compensation Extension Act of 2010 (Public Law Pub. L. 112\u201396, title II, \u00a7\u00a72122(a)\u2013(e), 2141, 2142(a), (c),\n111\u2013205).\u2019\u2019] 2143, 2181(b), Feb. 22, 2012, 126 Stat. 163\u2013166, 168\u2013170, 180;\n[Pub. L. 111\u2013205, \u00a72(d), July 22, 2010, 124 Stat. 2237, pro- Pub. L. 112\u2013240, title V, \u00a7\u00a7501(a), (b), 503(a), Jan. 2, 2013,"
+        "source": "irs_publication_526_charitable_contributions.pdf",
+        "page": 597,
+        "text": "you get a notice from the IRS. more information about the rights, what they mean to you,\nand how they apply to specific situations you may encoun-\n\u2022 TAS works to resolve large-scale (systemic) problems\nter with the IRS. TAS strives to protect taxpayer rights and\nthat affect many taxpayers. You can report systemic is-\nensure the IRS is administering the tax law in a fair and\nsues at www.IRS.gov/SAMS. (Be sure not to include\nequitable way.\nany personal identifiable information.)\nHow Do I Contact TAS?\nTAS has offices in every state, the District of Columbia,\nand Puerto Rico. To find your local advocate\u2019s number:\n\u2022 Go to www.TaxpayerAdvocate.IRS.gov/Contact-Us,\n38 Publication 526 (2025)"
       }
     ],
     "hit_index": -1,
@@ -1917,7 +1917,7 @@
     "retrieval_hit": true,
     "content_agreement": true,
     "grounding_failures": [],
-    "generated_answer": "The Additional Medicare Tax rate is 0.9%. [3]",
+    "generated_answer": "The Additional Medicare Tax rate is 0.9% [3]. This tax applies to Medicare wages, RRTA compensation, and self-employment income that exceed an unspecified threshold based on filing status [3].",
     "retrieved_chunks": [
       {
         "source": "irs_publication_517_social_security_for_members_of_the_clergy.pdf",

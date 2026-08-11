@@ -90,7 +90,7 @@ def run_ingestion(parsed_dir: str):
         for page in doc_data.get("pages", []):
             page_number = page["page_number"]
             text = page["text"]
-            
+
             page_chunks, last_section = chunk_page(text, page_number, doc_id, last_section)
             
             for chunk in page_chunks:

@@ -46,25 +46,25 @@ const DocumentsView = () => {
     <div className="w-full max-w-5xl mx-auto flex flex-col gap-8 animate-in fade-in duration-500">
       
       {/* Filters Section */}
-      <div className="bg-slate-800/60 backdrop-blur-md rounded-2xl border border-slate-700/50 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-[#0a0a0a] rounded-lg border border-zinc-800 p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-slate-100">Document Library</h2>
-          <p className="text-sm text-slate-400 mt-1">
+          <h2 className="text-xl font-bold text-zinc-100">Document Library</h2>
+          <p className="text-sm text-zinc-400 mt-1">
             Browse and view all source materials indexed in the RAG system.
           </p>
         </div>
         
         <div className="flex items-center gap-3">
-          <span className="text-sm font-medium text-slate-300">Filter by POV:</span>
+          <span className="text-sm font-medium text-zinc-400">Filter by POV:</span>
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   selectedCategory === category
-                    ? 'bg-blue-600 text-white shadow-md shadow-blue-900/20'
-                    : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-600/50'
+                    ? 'bg-zinc-100 text-zinc-900'
+                    : 'bg-zinc-900 text-zinc-300 hover:bg-zinc-800 border border-zinc-800'
                 }`}
               >
                 {category === 'Unknown' ? 'General' : category.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
@@ -94,30 +94,30 @@ const DocumentsView = () => {
           </button>
         </div>
       ) : filteredDocuments.length === 0 ? (
-        <div className="bg-slate-800/40 rounded-xl border border-slate-700/50 p-12 text-center text-slate-400">
-          <p className="text-lg">No documents found for this category.</p>
+        <div className="bg-zinc-900/50 rounded-lg border border-zinc-800 p-12 text-center text-zinc-400">
+          <p className="text-sm">No documents found for this category.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredDocuments.map(doc => (
             <div 
               key={doc.doc_id} 
-              className="group bg-slate-800/40 hover:bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/10 hover:border-slate-600"
+              className="bg-[#0a0a0a] rounded-lg border border-zinc-800 p-5 flex flex-col justify-between transition-colors hover:border-zinc-600"
             >
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center border border-red-500/20">
-                    <svg className="w-5 h-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="mt-0.5">
+                    <svg className="w-5 h-5 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-slate-200 break-all line-clamp-2" title={doc.source_file}>
+                  <h3 className="font-medium text-zinc-200 text-sm break-words line-clamp-2" title={doc.source_file}>
                     {doc.source_file}
                   </h3>
                 </div>
                 
-                <div className="mb-6">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-slate-700 text-slate-300 border border-slate-600">
+                <div className="mb-5">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-zinc-900 text-zinc-400 border border-zinc-800">
                     ID: {doc.doc_id}
                   </span>
                 </div>
@@ -125,9 +125,9 @@ const DocumentsView = () => {
 
               <button
                 onClick={() => handleViewPdf(doc.doc_id)}
-                className="w-full flex items-center justify-center gap-2 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-colors text-sm shadow-sm"
+                className="w-full flex items-center justify-center gap-2 py-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 rounded-md font-medium transition-colors text-xs border border-zinc-800 hover:border-zinc-700"
               >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>

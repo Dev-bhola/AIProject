@@ -38,9 +38,30 @@ export default function QAView() {
     }
   };
 
+  const examples = [
+    "What is the name of the publication that explains taxpayer rights?",
+    "What is the name of the office that handles taxpayer complaints?",
+    "Who has the right to retain an authorized representative to deal with the IRS?",
+  ];
+
   return (
     <div className="w-full flex flex-col items-center">
       <SearchBar onSearch={handleSearch} isLoading={isLoading} />
+      
+      {/* Example Chips */}
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-2 max-w-3xl">
+        <span className="text-xs font-medium text-zinc-500 mr-1">Try an example:</span>
+        {examples.map((ex, idx) => (
+          <button
+            key={idx}
+            onClick={() => handleSearch(ex)}
+            disabled={isLoading}
+            className="px-3 py-1.5 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-100 border border-zinc-800 hover:border-zinc-700 rounded-md text-xs transition-colors"
+          >
+            {ex}
+          </button>
+        ))}
+      </div>
       
       {error && (
         <div className="w-full max-w-3xl mx-auto mt-8 p-4 bg-red-900/30 border border-red-500/30 rounded-xl text-red-200 text-sm text-center">

@@ -3,6 +3,8 @@ import json
 import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from backend.app.api.router import api_router
 from backend.app.core.config import settings
 from backend.app.retrieval.search import get_qdrant_client
@@ -59,3 +61,16 @@ def health_check():
     return {"status": "ok"}
 
 app.include_router(api_router, prefix="/api")
+
+frontend_dist = os.path.join("frontend", "dist")
+if os.path.exists(frontend_dist):
+    assets_dir = os.path.join(frontend_dist, "assets")
+    if os.path.exists(assets_dir):
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+        
+    @app.get("/{full_path:path}")
+    async def serve_frontend(full_path: str):
+        path = os.path.join(frontend_dist, full_path)
+        if os.path.exists(path) and os.path.isfile(path):
+            return FileResponse(path)
+        return FileResponse(os.path.join(frontend_dist, "index.html"))

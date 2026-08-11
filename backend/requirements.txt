@@ -10,3 +10,4 @@ requests
 pandas
 groq
 aiofiles
+sentence-transformers

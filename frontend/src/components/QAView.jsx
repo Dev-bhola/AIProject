@@ -39,9 +39,9 @@ export default function QAView() {
   };
 
   const examples = [
-    "What is the name of the publication that explains taxpayer rights?",
-    "What is the name of the office that handles taxpayer complaints?",
-    "Who has the right to retain an authorized representative to deal with the IRS?",
+    "What is the Additional Medicare Tax rate?",
+    "What did the Court decide about reasonable accommodation?",
+    "What is required for a reverse QTIP election?",
   ];
 
   return (

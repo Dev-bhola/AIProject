@@ -20,7 +20,7 @@ export default function SearchBar({ onSearch, isLoading }) {
       <input
         type="text"
         className="block w-full pl-12 pr-28 py-3.5 bg-[#0a0a0a] border border-zinc-800 rounded-lg text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 transition-colors shadow-sm"
-        placeholder="Ask a legal question (e.g., What is the objective of Milestone 1?)"
+        placeholder="Ask a legal question (e.g., What is the Additional Medicare Tax rate?)"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         disabled={isLoading}

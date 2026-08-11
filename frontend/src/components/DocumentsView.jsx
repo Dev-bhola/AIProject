@@ -117,7 +117,10 @@ const DocumentsView = () => {
                 </div>
                 
                 <div className="mb-5">
-                  <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-zinc-900 text-zinc-400 border border-zinc-800">
+                  <span
+                    className="inline-block max-w-full px-2 py-0.5 rounded text-[10px] font-medium bg-zinc-900 text-zinc-400 border border-zinc-800 truncate align-top"
+                    title={doc.doc_id}
+                  >
                     ID: {doc.doc_id}
                   </span>
                 </div>

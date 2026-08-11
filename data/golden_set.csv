@@ -1,40 +1,51 @@
-sample_query,ground_truth_answer,source_document,page_reference,category,difficulty
-What is the name of the publication that explains taxpayer rights?,Publication 1,p1.pdf,,tax_docs,medium
-How often should the IRS provide clear explanations to taxpayers?,"The IRS should provide clear explanations in all tax forms, instructions, publications, notices, and correspondence.",p1.pdf,,tax_docs,medium
-What is the name of the office that handles taxpayer complaints?,Taxpayer Advocate Service,p1.pdf,,tax_docs,medium
-Who has the right to retain an authorized representative to deal with the IRS?,Taxpayers,p1.pdf,,tax_docs,medium
-How often should the IRS respond to taxpayers' objections and documentation?,The IRS will consider timely objections and documentation promptly and fairly.,p1.pdf,,tax_docs,medium
-What is the Catalog Number for Publication 1?,64731W,p1.pdf,,tax_docs,medium
-What is the maximum amount of time the IRS has to audit a tax year or collect a tax debt?,The maximum amount of time is not specified.,p1.pdf,,tax_docs,medium
-Who will the IRS contact if they need more information from taxpayers?,"Other persons, such as a neighbor, bank, employer, or employees",p1.pdf,,tax_docs,medium
-What is the penalty for filing a 1099-MISC form late under the CARES act?,Not answerable from provided documents,,,unanswerable,medium
-What did the Supreme Court decide in Roe v. Wade?,Not answerable from provided documents,,,unanswerable,medium
-How many amendments are in the US Constitution?,Not answerable from provided documents,,,unanswerable,medium
-What is the minimum wage under the Fair Labor Standards Act?,Not answerable from provided documents,,,unanswerable,medium
-What are the requirements for obtaining a patent in the United States?,Not answerable from provided documents,,,unanswerable,medium
-What percentage of votes is required to constitute a quorum for a vote regarding the settlement of the matter?,60%,1901404.pdf,10,judgments,medium
-Does Rule of Professional Conduct (RPC) 1.8(g) prohibit an attorney from making an aggregate settlement for multiple clients without their consent?,yes,1901404.pdf,8,judgments,medium
-What is the proposed change suggested by Charles Silver and Lynn Baker regarding RPC 1.8(g)?,The proposed change would permit litigants to agree to abide by majority rule.,1901404.pdf,23,judgments,medium
-Does the Department of Revenue's interpretation of 'income not taxable' in their Bulletins cite Dayco for support?,yes,n.c._dept_of_revenue_v._graybar_elec._co._1.pdf,21,judgments,medium
-What is the nature of the Attorney General's opinion regarding tax matters in North Carolina?,The Attorney General's opinion on tax matters is merely advisory.,n.c._dept_of_revenue_v._graybar_elec._co._1.pdf,20,judgments,medium
-"What did the Department of N.C. reduce Graybar's NEL by, in 2007 and 2008?",The apportioned amount of the Dividends received,n.c._dept_of_revenue_v._graybar_elec._co._1.pdf,6,judgments,medium
-What is the taxpayer's right to know about the maximum amount of time the IRS has to audit a particular tax year?,the maximum amount of time the IRS has to audit a particular tax year,p1.pdf,1,tax_docs,medium
-What is explained in both Publication 5 and 556?,Your appeal rights and information on how to prepare a protest if you don’t agree,p1.pdf,2,tax_docs,medium
-How old was a person considered to be in order to be considered 65 or older at the end of 2025?,65,p17.pdf,8399,tax_docs,medium
-What happens to the person's tax benefits if only one of the parents claims the child as a qualifying child?,The IRS will disallow the other parent's claim to the benefits.,p17.pdf,8338,tax_docs,medium
-What is the base amount if an individual is single and filing a return?,"$25,000",p17.pdf,8369,tax_docs,medium
-"If you received a letter proposing tax-exempt status changes, where can you learn more about your appeal rights?",www.irs.gov/appeals,p5.pdf,2,tax_docs,medium
-What entity can provide assistance to taxpayers who speak English as a second language under the IRS?,Low Income Taxpayer Clinics (LITCs),p5.pdf,5,tax_docs,medium
-What is the date by which the U.S. Tax Court must receive a petition if the taxpayer has received a final determination letter denying relief?,90 days after the IRS sent the final determination letter,p5.pdf,7,tax_docs,medium
-What is the provision mentioned in the first tier of the Utah Domicile Statute in 2012?,Resident-Student Provision,tischmak_v._tax_commission.pdf,6,judgments,medium
-How many days in a year did Tischmak need to spend in Utah to be considered a resident individual?,183,tischmak_v._tax_commission.pdf,5,judgments,medium
-What was the specific issue addressed by the U.S. Supreme Court's case of Saenz v. Roe?,Saenz v. Roe addressed the constitutional right to travel from one State to another.,tischmak_v._tax_commission.pdf,9,judgments,medium
-What Pub. L. number was used to substitute 'shall be treated as not married at the close of the tax- able year' for 'shall not be considered as married'?,Pub. L. 94–455,USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf,33,acts,medium
-"In the case of subsection (b), what is the initial bracket amount?","$10,000",USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf,6,acts,medium
-What was the purpose of Pub. L. 97–448?,to further the objective of obtaining balanced budgets in the near future,USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf,30,acts,medium
-What was the year in which the phrase 'Gross income means all' was added to the definition of Gross income in section 61 of the Internal Revenue Code?,1976,USCODE-2023-title26-subtitleA-chap1-subchapB-partI.pdf,1,acts,medium
-What is the specific change made by Pub. L. 105–34 to subsection (c)(5)(B) of the specified code?,The change substituted ‘the sum of $250 and such individual’s earned income’ for ‘such individual’s earned income’,USCODE-2023-title26-subtitleA-chap1-subchapB-partI.pdf,14,acts,medium
-What is the maximum adjusted gross income for an individual in 2023 to be treated as performing services in the performing arts as an employee?,"$16,000",USCODE-2023-title26-subtitleA-chap1-subchapB-partI.pdf,5,acts,medium
-"What rate was substituted for 12.50 by sections 201, 202, 203, and 204 of the Tax Reduction Act of 1975?",2.10,USCODE-2023-title26-subtitleC.pdf,170,acts,medium
-What is the rate of the payroll tax for wages paid during the calendar year 1981?,1.35 percent,USCODE-2023-title26-subtitleC.pdf,9,acts,medium
-What is the effective month for taking the Railroad Retirement Act changes from September 1965?,September 1965,USCODE-2023-title26-subtitleC.pdf,70,acts,medium
+sample_query,ground_truth_answer,source_document,category,page_reference
+What did the Court in Rowley decline to establish?,The Court in Rowley declined ‘to establish any one test for determining the adequacy of educational benefits conferred upon all children covered by the Act.’,USREPORTS-580-386.pdf,judgment,12
+What did the Supreme Court decide in Roe v. Wade?,Not answerable from provided documents,,unanswerable,
+How is substantial value determined?,The organization determines whether the value of an item or benefit is substantial by using Revenue Procedures 90-12 and 92-49 and the inflation adjustment in Revenue Procedure 2024-40.,irs_publication_526_charitable_contributions.pdf,tax_doc,565
+What type of payments are listed on Form 1120-POL?,Political organizations,irs_publication_525_taxable_and_nontaxable_income.pdf,tax_doc,41
+How often does the Secretary disseminate information under the pilot program?,The Secretary shall disseminate such information no less than quarterly.,veterans_comprehensive_prevention_access_to_care_and_treatment_act_of.pdf,act,3
+How should U.S. tax payments be remitted?,Payments of U.S. tax must be remitted to the IRS in U.S. dollars.,irs_publication_523_selling_your_home.pdf,tax_doc,25
+How do federal appellate courts agree on the use of the Internet for CSAM?,"The First, Second, Third, and Fifth Circuits have taken the position that the government can satisfy the 'in interstate commerce' element of a statute simply by showing that the Internet was used.",crime_the_commerce_clause_and_the_internet_everycrsreportcom.pdf,pov,10
+What is the current federal corporate tax rate for foreign banks operating in Germany?,Not answerable from provided documents,,unanswerable,
+How many FTAs has the United States entered into between 1985 and 2020?,"The United States used the TPA framework to negotiate, approve, and implement several bilateral and regional FTAs. Between 1985 and 2020, the United States entered into 16 FTAs.",2025-09-25_R47679_df545388f704d28e5c7411a590b4bce0f19ef5ad.pdf,pov,11
+What is required for a reverse QTIP election to be effective if GST exemption has been allocated to the trust?,A protective reverse QTIP election must also be made.,CFR-2025-title26-vol16-sec26-2653-1.pdf,tax_doc,768
+What date did the CA5 issue its order?,"the CA5 issued its order on Apr. 18, 2025",a_a_r_p_et_al_v_trump_president_of_the.pdf,judgment,17
+When does Executive Order 9937 become effective?,"This order shall become effective at the close of business in Washington, D.C., on June 29, 1951.",USCODE-2024-title22-chap15-subchapV-sec1382.pdf,act,3
+What is the authority given to the Secretary concerned?,The authority includes the power to determine both the validity of claims for CRSC payments and the amount due on each claim.,see_illinois_surety_co_v_united_states_ex_rel_peeler.pdf,judgment,11
+What is the meaning of 'plausibly' in a complaint?,"Plausibly does not mean 'probably,' but 'it asks for more than a sheer possibility that a defendant has acted unlawfully.'",smith_wesson_brands_inc_et_al_v_estados.pdf,judgment,13
+What is the maximum amount that can be excluded from state or local income tax?,"The maximum amount is $9,500.",irs_publication_525_taxable_and_nontaxable_income.pdf,tax_doc,24
+What does the term 'qualified dividend income' refer to?,The term 'qualified dividend income' is defined in section 1(h)(11)(B).,Jobs and Growth Tax Relief Reconciliation Act of 2003.pdf,act,12
+How many congressional commissions were identified through a search of Congress.gov?,CRS identified 174 congressional commissions.,congressional_commissions_overview_and_considerations_for_congress_eve.pdf,pov,15
+What is the amount being rescinded?,"$1,389,525,000 are hereby rescinded.",fiscal_responsibility_act_of_2023.pdf,act,23
+"What is the maximum term of imprisonment for a person who violates subsection (b) when they know or have reasonable cause to believe that any firearm involved will be used to commit a felony, a Federal crime of terrorism, or a drug trafficking crime?",The person shall be sentenced to a term of imprisonment of not more than 25 years.,bipartisan_safer_communities_act.pdf,act,15
+When was a TRO entered in Nat’l Council of Nonprofits v. Off. of Federal Funding?,"A TRO was entered on February 3, 2025.",nationwide_injunctions_in_the_first_hundred_days_of_the_second_trump_a.pdf,pov,8
+How long has the rule against allowing jurors to testify about in-camera deliberations been in place?,For centuries.,USREPORTS-580-206.pdf,judgment,31
+What percentage of the time do district courts impose a sentence within the Guidelines?,District courts impose a sentence within the Guidelines (or below the Guidelines based on a Government motion) over 80% of the time.,USREPORTS-580-256.pdf,judgment,20
+What does the Due Process Clause sometimes demand?,Recusal even when a judge has no actual bias.,USREPORTS-580-285.pdf,judgment,3
+What percentage of estates are under $11.4 million?,"The Under $11.4 category accounts for the smallest share of estates, with a total as a % of Estate ranging from 7.00% to 34.78% across different filing types.",The Estate and Gift Tax An Overview.pdf,pov,14
+What is the value of controversy threshold for a trial by jury as per the Seventh Amendment?,The value in controversy shall exceed twenty dollars.,2026-04-03_R48896_eeb95035f2bad58ea962bf3029d88846ea4f5354.pdf,pov,13
+What does the Administrator determine regarding a proposed project's risk to the environment?,"the proposed project poses a low risk to the environment, as determined by the Administrator",good_samaritan_remediation_of_abandoned_hardrock_mines_act_of_2024.pdf,act,7
+How many constitutional points of order has the Senate voted on since 1989?,This report identifies 17 constitutional points of order that have been raised and received a Senate vote in relation thereto since 1989.,2025-11-26_R40948_e48177b6600db4a89af84c0c6ec18d8712472ef3.pdf,pov,2
+Who is treated as making a constructive addition to the trust?,S is not treated as making a constructive addition to the trust by reason of the tax apportionment clause in S's will.,CFR-2025-title26-vol16-sec26-2652-2.pdf,tax_doc,767
+What is included in the support you provide?,the fair rental value of your out-of-pocket expenses of operating the car for your child’s benefit,irs_publication_501_dependents_standard_deduction_and_filing_informati.pdf,tax_doc,21
+What does the Administrator do in carrying out section (j)(1)(D) with respect to a proposed project on State or private land?,"The Administrator provides an opportunity for cooperating persons and the public to participate in the Good Samaritan permit process, including carrying out environmental review and public comment procedures pursuant to subsection (l), and a public hearing, if requested.",good_samaritan_remediation_of_abandoned_hardrock_mines_act_of_2024.pdf,act,15
+"How many maps are dated December 18, 2020?","Forty-two maps are dated December 18, 2020.",bolstering_ecosystems_against_coastal_harm_act.pdf,act,9
+What is the standard the District contends for injunctive relief and damages?,The District's position is that bad faith or gross misjudgment is the correct standard across the board.,a_j_t_by_and_through_her_parents_a_t_et_al_v_osseo_area_schools_indepe.pdf,judgment,17
+When must a Form 706GS(T) be filed?,"A Form 706GS(T) must be filed on or before the 15th day of the 4th month after the close of the calendar year in which the taxable termination occurred, or on or before the 10th month following the month in which the death that resulted in the taxable termination occurred, whichever is later.",CFR-2025-title26-vol16-sec26-2663-1.pdf,tax_doc,776
+What percentage of over-claims was due to income reporting errors?,Errors in income reporting accounted for 21.4% of the over-claims.,The Earned Income Tax Credit (EITC) An Overview.pdf,pov,21
+What is the minimum wage under the Fair Labor Standards Act?,Not answerable from provided documents,,unanswerable,
+What agencies must the State consult with in developing a plan?,"The State, in developing the plan, consulted with appropriate public and nonprofit private agencies.",supporting_america.pdf,act,13
+What are the requirements for obtaining a patent in the United States?,Not answerable from provided documents,,unanswerable,
+What is the maximum new budget authority for advance appropriations in fiscal years 2025 and 2026?,"The maximum new budget authority for advance appropriations in each of those fiscal years is $28,852,000,000.",fiscal_responsibility_act_of_2023.pdf,act,13
+How long do you have to change or cancel a scheduled payment with IRS Direct Pay?,You can change or cancel within 2 days of scheduled payment.,irs_publication_502_medical_and_dental_expenses.pdf,tax_doc,24
+What is the typical function of a statute of limitations?,"Statutes of limitations serve a similar function to laches, providing a rule for determining whether a claim is timely enough to permit relief.",USREPORTS-580-328.pdf,judgment,7
+How often must the Board develop and submit an annual report to Congress?,The Board shall develop and submit an annual report not later than February 1 of each fiscal year beginning after the date of enactment.,america.pdf,act,26
+How long must pass after OMB's notification before payment can be made?,30 days,Middle Class Tax Relief and Job Creation Act of 2012.pdf,act,101
+What does a valid contract require?,a valid contract requires offer and acceptance of its terms,a_j_t_by_and_through_her_parents_a_t_et_al_v_osseo_area_schools_indepe.pdf,judgment,21
+How much in natural resource damage assessments does New Mexico allege it will incur?,"New Mexico alleges it will incur at least $3,625,000.",examining_the_future_of_pfas_cleanup_and_disposal_policy_everycrsrepor.pdf,pov,22
+What is the purpose of the statute's definition of 'reasonable accommodation'?,The statute's definition of 'reasonable accommodation' makes sense for current employees or applicants but not for retirees.,stanley_v_city_of_sanford_florida.pdf,judgment,3
+What must be included with the request for information from the IRS?,"The name, address, SSN (if known), and filing status (if known) of the parent whose information is to be shown on Form 8615.","Publication 929 (2021), Tax Rules for Children and Dependents.pdf",tax_doc,15
+How far does the state of Texas extend its jurisdiction over water?,Texas extends its jurisdiction over an area of nine nautical miles from the baseline.,offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf,pov,5
+What types of property interests can the Secretary of the Interior grant on the OCS?,"The Secretary of the Interior can grant leases, easements, or rights-of-way on the Outer Continental Shelf.",offshore_wind_energy_development_legal_framework_everycrsreportcom.pdf,pov,7
+How many amendments are in the US Constitution?,Not answerable from provided documents,,unanswerable,
+What is the Additional Medicare Tax rate?,"A 0.9% Additional Medicare Tax applies to Medicare wages, RRTA compensation, and self-employment income that are more than certain thresholds.",irs_publication_517_social_security_for_members_of_the_clergy.pdf,tax_doc,9

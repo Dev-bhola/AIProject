@@ -1,32 +1,54 @@
 import os
-import google.generativeai as genai
+from groq import Groq
 from backend.app.retrieval.search import hybrid_search
+from backend.app.generation.citation_validator import validate
 
-def generate_answer(query: str, retrieved_chunks: list[dict]) -> str:
-    api_key = os.environ.get("GEMINI_API_KEY")
+def generate_answer(query: str, retrieved_chunks: list[dict]) -> dict:
+    """
+    Returns a dict with:
+    {
+        "answer": str,
+        "grounded": bool,
+        "citations": list[dict],
+        "is_refusal": bool
+    }
+    """
+    api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
-        raise ValueError("GEMINI_API_KEY environment variable is not set")
-        
-    genai.configure(api_key=api_key)
+        raise ValueError("GROQ_API_KEY environment variable is not set")
     
     context_blocks = []
-    for chunk in retrieved_chunks:
+    sources = []
+    for i, chunk in enumerate(retrieved_chunks):
+        marker = i + 1
         source_file = chunk.get("source_file", "Unknown Source")
         page_num = chunk.get("page_number", "?")
-        text = chunk.get("text", "")
+        section = chunk.get("section_title", "Unknown Section")
+        text = chunk.get("parent_section_text", chunk.get("text", "")) # Fallback to text if parent not yet available
         
-        context_blocks.append(f"[Source: {source_file}, Page {page_num}]\n{text}")
+        context_blocks.append(f"[{marker}] Document: {source_file} | Section: {section} | Page: {page_num}\n{text}")
+        
+        sources.append({
+            "marker": marker,
+            "source_file": source_file,
+            "doc_id": chunk.get("doc_id", ""),
+            "section": section,
+            "page": str(page_num),
+            "chunk_id": chunk.get("chunk_id", "")
+        })
         
     context_string = "\n\n".join(context_blocks)
     
     prompt = f"""
 You are an expert legal AI assistant. Your task is to answer the user's query based ONLY on the provided document excerpts. 
 
-Rules:
-1. You must base your answer strictly on the provided context.
-2. You must cite your sources inline using the exact format: [source_file, Page X].
-3. Do not include any external knowledge.
-4. If the provided documents do not contain the answer, you must reply exactly with: 'I cannot answer this based on the provided documents.'
+CITATION RULES:
+1. Only cite a source using [N] where N is the marker for the document that ACTUALLY supports the specific claim next to it.
+2. If you are not confident a claim is supported by a specific source, DO NOT include that claim in your answer at all. Omit it silently.
+3. Never write about your own citation-checking process, uncertainty, or reasoning in the answer. Do not write phrases like "this claim has a missing identifier," "I could not find," "specifically," or any parenthetical commentary about sources. The answer must read as a clean, direct response — as if written by a knowledgeable assistant, not as a debugging log.
+4. If NONE of the provided sources support any part of an answer to the question, respond only with the exact refusal phrase, nothing else: 'I could not find the answer in the provided legal sources.'
+5. Complete every sentence you start. Do not cut off mid-sentence.
+6. CRITICAL: Do NOT use your own knowledge. Never guess or infer from general knowledge.
 
 Context Documents:
 {context_string}
@@ -34,11 +56,53 @@ Context Documents:
 User Query: {query}
 """
 
-    model = genai.GenerativeModel("gemini-2.5-flash-lite")
+    client = Groq(api_key=api_key)
     
-    response = model.generate_content(prompt)
-    
-    return response.text
+    try:
+        chat_completion = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model="llama-3.1-8b-instant",
+        )
+        answer = chat_completion.choices[0].message.content
+        
+        val_result = validate(answer, sources)
+        
+        # Self-correction loop
+        if not val_result["grounded"] and not val_result["is_refusal"]:
+            correction_prompt = f"""
+Your previous answer failed citation validation.
+You either hallucinated a citation marker that does not exist, or you made factual claims without providing a citation.
+
+Previous Answer: {answer}
+
+Please rewrite your answer. Ensure EVERY factual claim is followed by a valid [N] citation marker corresponding ONLY to the provided sources. 
+If the answer is not in the sources, reply exactly with: 'I could not find the answer in the provided legal sources.'
+"""
+            chat_completion_2 = client.chat.completions.create(
+                messages=[
+                    {"role": "user", "content": prompt},
+                    {"role": "assistant", "content": answer},
+                    {"role": "user", "content": correction_prompt}
+                ],
+                model="llama-3.1-8b-instant",
+            )
+            answer = chat_completion_2.choices[0].message.content
+            val_result = validate(answer, sources)
+            
+        return {
+            "answer": answer,
+            "grounded": val_result["grounded"],
+            "citations": val_result["resolved_citations"],
+            "is_refusal": val_result["is_refusal"]
+        }
+    except Exception as e:
+        print(f"Query generation failed: {e}")
+        return {
+            "answer": f"Query generation failed: {e}",
+            "grounded": False,
+            "citations": [],
+            "is_refusal": False
+        }
 
 if __name__ == "__main__":
     from dotenv import load_dotenv
@@ -49,13 +113,16 @@ if __name__ == "__main__":
     print(f"Running End-to-End Pipeline for query: '{test_query}'...\n")
     
     print("1. Retrieving chunks...")
-    chunks = hybrid_search(test_query, top_k=3)
+    chunks = hybrid_search(test_query, top_k=3).results
     
     if not chunks:
         print("No chunks found. Is Qdrant and the BM25 index populated?")
     else:
         print(f"Retrieved {len(chunks)} chunks. Generating answer...\n")
-        answer = generate_answer(test_query, chunks)
+        result = generate_answer(test_query, [dict(c) for c in chunks])
         
         print("--- FINAL AI ANSWER ---")
-        print(answer)
+        print(result["answer"])
+        print("\n--- GROUNDING ---")
+        print(f"Grounded: {result['grounded']}")
+        print(f"Citations: {result['citations']}")

@@ -1,0 +1,40 @@
+sample_query,ground_truth_answer,source_document,page_reference,category,difficulty
+What is the name of the publication that explains taxpayer rights?,Publication 1,p1.pdf,,tax_docs,medium
+How often should the IRS provide clear explanations to taxpayers?,"The IRS should provide clear explanations in all tax forms, instructions, publications, notices, and correspondence.",p1.pdf,,tax_docs,medium
+What is the name of the office that handles taxpayer complaints?,Taxpayer Advocate Service,p1.pdf,,tax_docs,medium
+Who has the right to retain an authorized representative to deal with the IRS?,Taxpayers,p1.pdf,,tax_docs,medium
+How often should the IRS respond to taxpayers' objections and documentation?,The IRS will consider timely objections and documentation promptly and fairly.,p1.pdf,,tax_docs,medium
+What is the Catalog Number for Publication 1?,64731W,p1.pdf,,tax_docs,medium
+What is the maximum amount of time the IRS has to audit a tax year or collect a tax debt?,The maximum amount of time is not specified.,p1.pdf,,tax_docs,medium
+Who will the IRS contact if they need more information from taxpayers?,"Other persons, such as a neighbor, bank, employer, or employees",p1.pdf,,tax_docs,medium
+What is the penalty for filing a 1099-MISC form late under the CARES act?,Not answerable from provided documents,,,unanswerable,medium
+What did the Supreme Court decide in Roe v. Wade?,Not answerable from provided documents,,,unanswerable,medium
+How many amendments are in the US Constitution?,Not answerable from provided documents,,,unanswerable,medium
+What is the minimum wage under the Fair Labor Standards Act?,Not answerable from provided documents,,,unanswerable,medium
+What are the requirements for obtaining a patent in the United States?,Not answerable from provided documents,,,unanswerable,medium
+What percentage of votes is required to constitute a quorum for a vote regarding the settlement of the matter?,60%,1901404.pdf,10,judgments,medium
+Does Rule of Professional Conduct (RPC) 1.8(g) prohibit an attorney from making an aggregate settlement for multiple clients without their consent?,yes,1901404.pdf,8,judgments,medium
+What is the proposed change suggested by Charles Silver and Lynn Baker regarding RPC 1.8(g)?,The proposed change would permit litigants to agree to abide by majority rule.,1901404.pdf,23,judgments,medium
+Does the Department of Revenue's interpretation of 'income not taxable' in their Bulletins cite Dayco for support?,yes,n.c._dept_of_revenue_v._graybar_elec._co._1.pdf,21,judgments,medium
+What is the nature of the Attorney General's opinion regarding tax matters in North Carolina?,The Attorney General's opinion on tax matters is merely advisory.,n.c._dept_of_revenue_v._graybar_elec._co._1.pdf,20,judgments,medium
+"What did the Department of N.C. reduce Graybar's NEL by, in 2007 and 2008?",The apportioned amount of the Dividends received,n.c._dept_of_revenue_v._graybar_elec._co._1.pdf,6,judgments,medium
+What is the taxpayer's right to know about the maximum amount of time the IRS has to audit a particular tax year?,the maximum amount of time the IRS has to audit a particular tax year,p1.pdf,1,tax_docs,medium
+What is explained in both Publication 5 and 556?,Your appeal rights and information on how to prepare a protest if you don’t agree,p1.pdf,2,tax_docs,medium
+How old was a person considered to be in order to be considered 65 or older at the end of 2025?,65,p17.pdf,8399,tax_docs,medium
+What happens to the person's tax benefits if only one of the parents claims the child as a qualifying child?,The IRS will disallow the other parent's claim to the benefits.,p17.pdf,8338,tax_docs,medium
+What is the base amount if an individual is single and filing a return?,"$25,000",p17.pdf,8369,tax_docs,medium
+"If you received a letter proposing tax-exempt status changes, where can you learn more about your appeal rights?",www.irs.gov/appeals,p5.pdf,2,tax_docs,medium
+What entity can provide assistance to taxpayers who speak English as a second language under the IRS?,Low Income Taxpayer Clinics (LITCs),p5.pdf,5,tax_docs,medium
+What is the date by which the U.S. Tax Court must receive a petition if the taxpayer has received a final determination letter denying relief?,90 days after the IRS sent the final determination letter,p5.pdf,7,tax_docs,medium
+What is the provision mentioned in the first tier of the Utah Domicile Statute in 2012?,Resident-Student Provision,tischmak_v._tax_commission.pdf,6,judgments,medium
+How many days in a year did Tischmak need to spend in Utah to be considered a resident individual?,183,tischmak_v._tax_commission.pdf,5,judgments,medium
+What was the specific issue addressed by the U.S. Supreme Court's case of Saenz v. Roe?,Saenz v. Roe addressed the constitutional right to travel from one State to another.,tischmak_v._tax_commission.pdf,9,judgments,medium
+What Pub. L. number was used to substitute 'shall be treated as not married at the close of the tax- able year' for 'shall not be considered as married'?,Pub. L. 94–455,USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf,33,acts,medium
+"In the case of subsection (b), what is the initial bracket amount?","$10,000",USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf,6,acts,medium
+What was the purpose of Pub. L. 97–448?,to further the objective of obtaining balanced budgets in the near future,USCODE-2023-title26-subtitleA-chap1-subchapA-partI.pdf,30,acts,medium
+What was the year in which the phrase 'Gross income means all' was added to the definition of Gross income in section 61 of the Internal Revenue Code?,1976,USCODE-2023-title26-subtitleA-chap1-subchapB-partI.pdf,1,acts,medium
+What is the specific change made by Pub. L. 105–34 to subsection (c)(5)(B) of the specified code?,The change substituted ‘the sum of $250 and such individual’s earned income’ for ‘such individual’s earned income’,USCODE-2023-title26-subtitleA-chap1-subchapB-partI.pdf,14,acts,medium
+What is the maximum adjusted gross income for an individual in 2023 to be treated as performing services in the performing arts as an employee?,"$16,000",USCODE-2023-title26-subtitleA-chap1-subchapB-partI.pdf,5,acts,medium
+"What rate was substituted for 12.50 by sections 201, 202, 203, and 204 of the Tax Reduction Act of 1975?",2.10,USCODE-2023-title26-subtitleC.pdf,170,acts,medium
+What is the rate of the payroll tax for wages paid during the calendar year 1981?,1.35 percent,USCODE-2023-title26-subtitleC.pdf,9,acts,medium
+What is the effective month for taking the Railroad Retirement Act changes from September 1965?,September 1965,USCODE-2023-title26-subtitleC.pdf,70,acts,medium

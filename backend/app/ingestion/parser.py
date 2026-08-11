@@ -2,29 +2,77 @@ import os
 import json
 import logging
 import pdfplumber
+import re
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def parse_pdf(file_path: str, doc_type: str, doc_id: str) -> dict:
+def _is_toc_page(text: str) -> bool:
+    if '........' in text:
+        return True
+    alpha_count = sum(1 for c in text if c.isalpha())
+    digit_count = sum(1 for c in text if c.isdigit())
+    if alpha_count > 0 and digit_count / alpha_count > 0.25:
+        return True
+    return False
+
+def extract_printed_page(text: str) -> int | None:
+    lines = [line.strip() for line in text.split('\n') if line.strip()]
+    if not lines:
+        return None
+        
+    candidates = lines[:4] + lines[-4:]
+    for line in candidates:
+        line_clean = line.strip().lower()
+        match = re.match(r'^\s*(?:page\s*)?(?:-?\s*)?(\d+)(?:\s*-)?(?:\s*of\s*\d+)?\s*$', line_clean)
+        if match:
+            return int(match.group(1))
+    return None
+
+def parse_pdf(file_path: str, category: str, doc_id: str) -> dict:
     source_file = os.path.basename(file_path)
     document_data = {
         "doc_id": doc_id,
         "source_file": source_file,
-        "doc_type": doc_type,
+        "category": category,
         "pages": []
     }
     
     try:
         with pdfplumber.open(file_path) as pdf:
-            for page_number, page in enumerate(pdf.pages, start=1):
+            last_confirmed = 0
+            offset = 0
+            
+            for physical_idx, page in enumerate(pdf.pages, start=1):
                 text = page.extract_text()
                 if not text or len(text.strip()) < 20:
-                    logger.warning(f"Skipping page {page_number} in {source_file}: text is empty or too short.")
+                    logger.warning(f"Skipping page {physical_idx} in {source_file}: text is empty or too short.")
+                    continue
+                    
+                if _is_toc_page(text):
+                    logger.info(f"Skipping page {physical_idx} in {source_file}: detected as TOC/index page.")
                     continue
                 
+                detected = extract_printed_page(text)
+                final_page = physical_idx
+                
+                if detected is not None:
+                    if last_confirmed and detected <= last_confirmed:
+                        logger.warning(f"[{source_file}] Detected page {detected} goes backward from {last_confirmed}. Using offset {offset}")
+                        final_page = physical_idx + offset
+                    elif last_confirmed and detected > last_confirmed + 5: 
+                        logger.warning(f"[{source_file}] Detected page {detected} jumps too far from {last_confirmed}. Using offset {offset}")
+                        final_page = physical_idx + offset
+                    else:
+                        offset = detected - physical_idx
+                        final_page = detected
+                        last_confirmed = detected
+                else:
+                    final_page = physical_idx + offset
+                    logger.debug(f"[{source_file}] No printed page found on physical {physical_idx}. Using offset {offset}")
+                
                 document_data["pages"].append({
-                    "page_number": page_number,
+                    "page_number": final_page,
                     "text": text.strip()
                 })
     except Exception as e:
@@ -42,17 +90,17 @@ def parse_directory(input_dir: str, output_dir: str):
         "tax_docs": "tax_doc"
     }
     
-    for folder_name, doc_type in type_mapping.items():
+    for folder_name, category in type_mapping.items():
         folder_path = os.path.join(input_dir, folder_name)
         if not os.path.isdir(folder_path):
             continue
             
         for filename in os.listdir(folder_path):
-            if filename.lower().endswith(".pdf"):
+            if filename.endswith(".pdf"):
                 file_path = os.path.join(folder_path, filename)
                 doc_id = os.path.splitext(filename)[0]
                 
-                parsed_data = parse_pdf(file_path, doc_type, doc_id)
+                parsed_data = parse_pdf(file_path, category, doc_id)
                 
                 if parsed_data["pages"]:
                     output_file = os.path.join(output_dir, f"{doc_id}.json")

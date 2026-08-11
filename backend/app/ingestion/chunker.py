@@ -82,20 +82,38 @@ def _merge_with_overlap(splits: list[str], chunk_size: int, overlap: int, sep: s
             
     return merged_chunks
 
-def chunk_page(text: str, page_number: int, doc_id: str, chunk_size: int = 500, overlap: int = 75) -> list[dict]:
+from backend.app.core.config import settings
+
+def chunk_page(text: str, page_number: int, doc_id: str, last_section: str = "Unknown Section", chunk_size: int | None = None, overlap: int | None = None) -> tuple[list[dict], str]:
+    chunk_size = chunk_size or settings.CHUNK_SIZE
+    overlap = overlap or settings.CHUNK_OVERLAP
     raw_chunks = _split_text(text, chunk_size, overlap)
     
     final_chunks = []
+    current_section = last_section
+    
     for index, chunk_text in enumerate(raw_chunks):
         if not chunk_text.strip():
             continue
+            
+        # Heuristic section detection
+        lines = chunk_text.strip().split('\n')
+        for line in lines[:3]: # check first few lines
+            line = line.strip()
+            # If line is short, all caps, or starts with Section/Chapter/Part
+            if (len(line) < 100 and line.isupper() and len(line) > 3) or \
+               line.upper().startswith(("SECTION ", "CHAPTER ", "PART ", "SUBTITLE ", "ARTICLE ")):
+                current_section = line
+                break
             
         final_chunks.append({
             "chunk_id": f"{doc_id}_p{page_number}_c{index}",
             "doc_id": doc_id,
             "page_number": page_number,
             "text": chunk_text.strip(),
-            "chunk_index": index
+            "chunk_index": index,
+            "section_title": current_section,
+            "parent_section_text": f"Section: {current_section}\n\n{chunk_text.strip()}"
         })
         
-    return final_chunks
+    return final_chunks, current_section

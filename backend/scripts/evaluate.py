@@ -2,20 +2,62 @@ import os
 import csv
 import re
 import json
+import requests
 from typing import Any
 from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path=os.path.join("backend", ".env"))
+from backend.app.core.config import settings
 from backend.app.retrieval.search import hybrid_search
 from backend.app.generation.qa import generate_answer
 
+def _call_judge(prompt: str) -> str:
+    """Calls the configured LLM judge (local Ollama or Groq) and returns the raw response text."""
+    if settings.ENVIRONMENT == "local":
+        response = requests.post(
+            "http://127.0.0.1:11434/api/chat",
+            json={
+                "model": "llama3.1",
+                "messages": [{"role": "user", "content": prompt}],
+                "stream": False,
+                "options": {"temperature": 0.0}
+            },
+            timeout=120
+        )
+        response.raise_for_status()
+        return response.json()['message']['content'].strip()
+    else:
+        client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+        chat_completion = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model="llama-3.1-8b-instant",
+            temperature=0.0
+        )
+        return chat_completion.choices[0].message.content.strip()
+
+def _call_judge_bool(prompt: str, key: str, error_label: str) -> bool | None:
+    """Calls the judge, extracts a JSON object from its response, and returns result[key] as a bool."""
+    try:
+        response_text = _call_judge(prompt)
+        match = re.search(r"```json\s*(.*?)\s*```", response_text, re.DOTALL)
+        json_str = match.group(1) if match else response_text
+
+        try:
+            result = json.loads(json_str)
+            if key not in result:
+                print(f"Judge parsing error: missing '{key}' field. Raw response: {response_text}")
+                return None
+            return bool(result[key])
+        except json.JSONDecodeError as e:
+            print(f"{error_label} JSON parse failed: {e}. Raw response: {response_text}")
+            return None
+    except Exception as e:
+        print(f"{error_label} check failed: {e}")
+        return None
+
 def content_agreement(generated_answer: str, ground_truth: str) -> bool | None:
     """Calls the LLM to verify if the generated answer conveys the same factual information as the ground truth."""
-    import json
-    import re
-    import requests
-    
     prompt = f"""
 You are a lenient factual judge. Determine if the Generated Answer conveys the same core factual information as the Ground Truth.
 
@@ -32,61 +74,16 @@ Respond ONLY with valid JSON: {{"agrees": true}} or {{"agrees": false}}. No othe
 Generated Answer: "{generated_answer}"
 Ground Truth: "{ground_truth}"
 """
-        
-    try:
-        from backend.app.core.config import settings
-        if settings.ENVIRONMENT == "local":
-            response = requests.post(
-                "http://127.0.0.1:11434/api/chat",
-                json={
-                    "model": "llama3.1",
-                    "messages": [{"role": "user", "content": prompt}],
-                    "stream": False,
-                    "options": {"temperature": 0.0}
-                },
-                timeout=120
-            )
-            response.raise_for_status()
-            response_text = response.json()['message']['content'].strip()
-        else:
-            import os
-            from groq import Groq
-            client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-            chat_completion = client.chat.completions.create(
-                messages=[{"role": "user", "content": prompt}],
-                model="llama-3.1-8b-instant",
-                temperature=0.0
-            )
-            response_text = chat_completion.choices[0].message.content.strip()
-        
-        match = re.search(r"```json\s*(.*?)\s*```", response_text, re.DOTALL)
-        json_str = match.group(1) if match else response_text
-        
-        try:
-            result = json.loads(json_str)
-            if "agrees" not in result:
-                print(f"Judge parsing error: missing 'agrees' field. Raw response: {response_text}")
-                return None
-            return bool(result["agrees"])
-        except json.JSONDecodeError as e:
-            print(f"Content agreement JSON parse failed: {e}. Raw response: {response_text}")
-            return None
-    except Exception as e:
-        print(f"Content agreement check failed: {e}")
-        return None
+    return _call_judge_bool(prompt, "agrees", "Content agreement")
 
 def citation_grounded(generated_answer: str, marker: int, cited_chunk_text: str) -> bool | None:
     """Calls the LLM to verify if the cited text genuinely supports the claim."""
-    import json
-    import re
-    import requests
-    
     prompt = f"""
 Look at the Generated Answer below, which contains citation markers like [{marker}].
 Does the Source Text genuinely and factually support the specific claims that the answer attributes to marker [{marker}]?
 
 Guidance:
-- Only return false if the Source Text actually contradicts the claim or completely fails to mention it. 
+- Only return false if the Source Text actually contradicts the claim or completely fails to mention it.
 - If the Source Text provides partial support or says the same thing in different words, return true.
 
 Respond ONLY with valid JSON matching this exact structure: {{"grounded": true}} or {{"grounded": false}}. No other text.
@@ -95,48 +92,7 @@ Generated Answer: "{generated_answer}"
 Citation Marker to Check: "[{marker}]"
 Source Text: "{cited_chunk_text}"
 """
-        
-    try:
-        from backend.app.core.config import settings
-        if settings.ENVIRONMENT == "local":
-            response = requests.post(
-                "http://127.0.0.1:11434/api/chat",
-                json={
-                    "model": "llama3.1",
-                    "messages": [{"role": "user", "content": prompt}],
-                    "stream": False,
-                    "options": {"temperature": 0.0}
-                },
-                timeout=120
-            )
-            response.raise_for_status()
-            response_text = response.json()['message']['content'].strip()
-        else:
-            import os
-            from groq import Groq
-            client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-            chat_completion = client.chat.completions.create(
-                messages=[{"role": "user", "content": prompt}],
-                model="llama-3.1-8b-instant",
-                temperature=0.0
-            )
-            response_text = chat_completion.choices[0].message.content.strip()
-        
-        match = re.search(r"```json\s*(.*?)\s*```", response_text, re.DOTALL)
-        json_str = match.group(1) if match else response_text
-        
-        try:
-            result = json.loads(json_str)
-            if "grounded" not in result:
-                print(f"Judge parsing error: missing 'grounded' field. Raw response: {response_text}")
-                return None
-            return bool(result["grounded"])
-        except json.JSONDecodeError as e:
-            print(f"Grounding JSON parse failed: {e}. Raw response: {response_text}")
-            return None
-    except Exception as e:
-        print(f"Grounding check failed: {e}")
-        return None
+    return _call_judge_bool(prompt, "grounded", "Grounding")
 
 def evaluate():
     golden_path = os.path.join("data", "golden_set.csv")

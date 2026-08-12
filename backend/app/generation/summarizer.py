@@ -62,7 +62,7 @@ async def _extract_batch_async(batch, batch_idx, client, sem, call_counter, stat
 
 async def _consolidate_group_async(group_facts, group_idx, client, sem, call_counter, stats):
     async with sem:
-        facts_text = "\n\n".join([f"Evidence ID: {f['evidence_id']}\n{f['text']}" for f in group_facts])
+        facts_text = "\n\n".join([f"Evidence ID: {f.get('evidence_ids', f.get('evidence_id'))}\n{f['text']}" for f in group_facts])
         prompt = get_consolidate_prompt(facts_text)
         
         try:

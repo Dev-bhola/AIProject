@@ -1,6 +1,7 @@
 import os
 import json
 import logging
+from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -50,7 +51,7 @@ app = FastAPI(title="Legal RAG System", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.CORS_ORIGINS,
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -68,9 +69,12 @@ if os.path.exists(frontend_dist):
     if os.path.exists(assets_dir):
         app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
         
+    frontend_dist_resolved = Path(frontend_dist).resolve()
+
     @app.get("/{full_path:path}")
     async def serve_frontend(full_path: str):
-        path = os.path.join(frontend_dist, full_path)
-        if os.path.exists(path) and os.path.isfile(path):
-            return FileResponse(path)
-        return FileResponse(os.path.join(frontend_dist, "index.html"))
+        requested_path = (frontend_dist_resolved / full_path).resolve()
+        is_within_dist = requested_path == frontend_dist_resolved or frontend_dist_resolved in requested_path.parents
+        if is_within_dist and requested_path.is_file():
+            return FileResponse(requested_path)
+        return FileResponse(frontend_dist_resolved / "index.html")

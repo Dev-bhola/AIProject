@@ -58,6 +58,13 @@ Both retrievers run per query, and their ranked lists are combined with Reciproc
 (`RRF_K=60`), so a chunk that ranks well on either exact keyword match or semantic similarity
 surfaces near the top, rather than requiring both signals to agree.
 
+Query-time embedding calls the Hugging Face Inference API in production (ingestion embeds
+locally, one-time, via `fastembed`, using the same model). If that call fails for any reason, it
+raises rather than silently returning a corrupted embedding — the retrieval layer catches that
+failure and degrades to keyword-only search for that query, reporting it honestly via
+`sources_used`, instead of letting a bad vector poison the ranked results without any visible
+sign that something went wrong.
+
 ## 3. Q&A and summarization
 
 **Q&A** (`/api/query`): hybrid search retrieves candidates, the top 4 are passed to Groq

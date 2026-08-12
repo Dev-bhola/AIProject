@@ -112,7 +112,8 @@ Edit `backend/.env`:
 QDRANT_URL=your_qdrant_url
 QDRANT_API_KEY=your_qdrant_api_key
 GROQ_API_KEY=your_groq_api_key
-ENVIRONMENT=production   # or "local" to route generation through Ollama instead of Groq
+HF_API_KEY=your_huggingface_api_key   # required in production — used for query-time embedding
+ENVIRONMENT=production   # or "local" to route generation and embedding through Ollama/fastembed instead of Groq/HF
 CORS_ORIGINS=http://localhost:5173,http://localhost:3000
 ```
 
@@ -242,6 +243,12 @@ APPROACH.md
 - **Graph RAG** (relationship mapping between documents) is explicitly
   optional in the assignment and was not implemented — deprioritized in favor
   of validating the core hybrid-search and citation-grounding pipeline first.
+- **CORS is restricted to `CORS_ORIGINS`**, not a wildcard. The deployed
+  frontend and backend are served from the same origin, so this doesn't
+  affect the app itself — but if the API is ever called cross-origin from a
+  different host (a separately-hosted frontend, a browser-based test
+  script), that origin needs to be added to `CORS_ORIGINS` on the deployed
+  service.
 
 See [docs/evaluation-report.md](docs/evaluation-report.md) for the full
 evaluation writeup and [APPROACH.md](APPROACH.md) for design rationale.

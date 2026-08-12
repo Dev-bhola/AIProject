@@ -3,7 +3,6 @@ import logging
 from backend.app.models.schemas import QueryRequest
 from backend.app.retrieval.search import hybrid_search
 from backend.app.generation.qa import generate_answer
-from backend.app.utils.citations import deduplicate_sources
 
 logger = logging.getLogger(__name__)
 router = APIRouter()

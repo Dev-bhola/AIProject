@@ -112,7 +112,7 @@ def run_ingestion(parsed_dir: str):
     # HARDCODED LOCAL EMBEDDING FOR FAST INGESTION (0 API CALLS)
     logger.info("Initializing fastembed locally for 384-dimensional vectors...")
     from fastembed import TextEmbedding
-    model = TextEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    model = TextEmbedding(model_name=settings.EMBEDDING_MODEL)
     
     embeddings = []
     # fastembed returns a generator of numpy arrays

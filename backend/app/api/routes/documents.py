@@ -11,14 +11,14 @@ class DocumentInfo(BaseModel):
     source_file: str
     category: str
 
-@router.get("/documents", response_model=list[DocumentInfo])
-def get_documents():
-    """
-    Returns a unique list of available documents from the corpus.
-    """
+_DOCUMENTS_CACHE: list[DocumentInfo] | None = None
+_DOC_ID_TO_SOURCE_FILE: dict[str, str] | None = None
+
+def _build_documents_cache():
+    global _DOCUMENTS_CACHE, _DOC_ID_TO_SOURCE_FILE
     search_module.load_bm25()
     corpus = search_module.BM25_CORPUS
-    
+
     unique_docs = {}
     for chunk in corpus:
         doc_id = chunk.get("doc_id")
@@ -26,29 +26,32 @@ def get_documents():
         category = chunk.get("category", "Unknown")
         if doc_id and source_file and doc_id not in unique_docs:
             unique_docs[doc_id] = {"source_file": source_file, "category": category}
-            
+
     # Sort alphabetically by source_file
-    sorted_docs = sorted(
+    _DOCUMENTS_CACHE = sorted(
         [DocumentInfo(doc_id=doc_id, source_file=info["source_file"], category=info["category"]) for doc_id, info in unique_docs.items()],
         key=lambda x: x.source_file.lower()
     )
-    
-    return sorted_docs
+    _DOC_ID_TO_SOURCE_FILE = {doc_id: info["source_file"] for doc_id, info in unique_docs.items()}
+
+@router.get("/documents", response_model=list[DocumentInfo])
+def get_documents():
+    """
+    Returns a unique list of available documents from the corpus.
+    """
+    if _DOCUMENTS_CACHE is None:
+        _build_documents_cache()
+    return _DOCUMENTS_CACHE
 
 @router.get("/documents/{doc_id}/pdf", response_class=FileResponse)
 def get_document_pdf(doc_id: str):
     """
     Returns the raw PDF file for a given document ID, if it exists.
     """
-    search_module.load_bm25()
-    corpus = search_module.BM25_CORPUS
-    
-    source_file = None
-    for chunk in corpus:
-        if chunk.get("doc_id") == doc_id:
-            source_file = chunk.get("source_file")
-            break
-            
+    if _DOC_ID_TO_SOURCE_FILE is None:
+        _build_documents_cache()
+
+    source_file = _DOC_ID_TO_SOURCE_FILE.get(doc_id)
     if not source_file:
         raise HTTPException(status_code=404, detail="Document not found in corpus.")
         

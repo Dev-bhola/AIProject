@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LoadingState from './LoadingState';
 import SummaryDisplay from './SummaryDisplay';
+import DocumentPicker from './DocumentPicker';
 import { API_BASE_URL } from '../apiConfig';
 import { pdfjs, Document, Page } from 'react-pdf';
 
@@ -76,32 +77,17 @@ export default function SummaryView() {
       <div className="w-full max-w-4xl mx-auto flex flex-col gap-6 items-center bg-[#0a0a0a] border border-zinc-800 p-6 rounded-lg shadow-sm">
         
         {/* Document Selector */}
-        <div className="w-full relative">
-          <select
-            value={selectedDocId}
-            onChange={(e) => {
-              setSelectedDocId(e.target.value);
-              setSummaryResult(null); // Clear summary when doc changes
-              setSummaryError(null);
-            }}
-            disabled={isSummarizing || isLoadingDocs}
-            className="block w-full pl-4 pr-10 py-3 bg-[#0a0a0a] border border-zinc-800 rounded-lg text-zinc-100 focus:outline-none focus:border-zinc-600 transition-colors appearance-none disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
-          >
-            <option value="" disabled>
-              {isLoadingDocs ? 'Loading documents...' : 'Select a legal document'}
-            </option>
-            {documents.map(doc => (
-              <option key={doc.doc_id} value={doc.doc_id}>
-                {doc.source_file}
-              </option>
-            ))}
-          </select>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <svg className="w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </div>
-        </div>
+        <DocumentPicker
+          documents={documents}
+          selectedDocId={selectedDocId}
+          isLoading={isLoadingDocs}
+          disabled={isSummarizing}
+          onSelect={(docId) => {
+            setSelectedDocId(docId);
+            setSummaryResult(null); // Clear summary when doc changes
+            setSummaryError(null);
+          }}
+        />
 
         {/* PDF Preview Area */}
         {selectedDocId ? (

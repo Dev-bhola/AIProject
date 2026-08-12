@@ -40,8 +40,8 @@ export default function QAView() {
 
   const examples = [
     "What is the Additional Medicare Tax rate?",
-    "What did the Court decide about reasonable accommodation?",
-    "What is required for a reverse QTIP election?",
+    "What is the maximum new budget authority for advance appropriations?",
+    "What is the Earned Income Tax Credit?",
   ];
 
   return (

@@ -41,7 +41,7 @@ def embed(text: str) -> list[float]:
             return [0.0] * settings.EMBEDDING_DIMENSION
 
     # Production logic: Hugging Face Inference API
-    api_url = f"https://router.huggingface.co/hf-inference/pipeline/feature-extraction/{settings.EMBEDDING_MODEL}"
+    api_url = f"https://router.huggingface.co/hf-inference/models/{settings.EMBEDDING_MODEL}/pipeline/feature-extraction"
     try:
         response = requests.post(api_url, headers=get_hf_headers(), json={"inputs": text}, timeout=20)
         response.raise_for_status()
@@ -70,7 +70,7 @@ def embed_batch(texts: list[str]) -> list[list[float]]:
             return [[0.0] * settings.EMBEDDING_DIMENSION for _ in texts]
             
     # Production logic: Hugging Face Inference API
-    api_url = f"https://router.huggingface.co/hf-inference/pipeline/feature-extraction/{settings.EMBEDDING_MODEL}"
+    api_url = f"https://router.huggingface.co/hf-inference/models/{settings.EMBEDDING_MODEL}/pipeline/feature-extraction"
     try:
         response = requests.post(api_url, headers=get_hf_headers(), json={"inputs": texts}, timeout=60)
         response.raise_for_status()

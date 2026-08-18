@@ -4,6 +4,7 @@ from groq import Groq
 from backend.app.core.config import settings
 from backend.app.retrieval.search import hybrid_search
 from backend.app.generation.citation_validator import validate
+from backend.app.generation.model_utils import get_dynamic_fallback
 
 def generate_answer(query: str, retrieved_chunks: list[dict]) -> dict:
     """
@@ -77,10 +78,20 @@ User Query: {query}
             answer = res.json()["message"]["content"]
         else:
             client = Groq(api_key=api_key)
-            chat_completion = client.chat.completions.create(
-                messages=[{"role": "user", "content": prompt}],
-                model="llama-3.1-8b-instant",
-            )
+            try:
+                chat_completion = client.chat.completions.create(
+                    messages=[{"role": "user", "content": prompt}],
+                    model=settings.LLM_MODEL,
+                )
+            except Exception as e:
+                if "404" in str(e) or "not found" in str(e).lower():
+                    print("Primary model failed with 404, trying dynamic fallback...")
+                    chat_completion = client.chat.completions.create(
+                        messages=[{"role": "user", "content": prompt}],
+                        model=get_dynamic_fallback(settings.LLM_MODEL),
+                    )
+                else:
+                    raise
             answer = chat_completion.choices[0].message.content
         
         val_result = validate(answer, sources)
@@ -113,14 +124,28 @@ If the sources do not contain the answer, reply exactly:
                 res2.raise_for_status()
                 answer = res2.json()["message"]["content"]
             else:
-                chat_completion_2 = client.chat.completions.create(
-                    messages=[
-                        {"role": "user", "content": prompt},
-                        {"role": "assistant", "content": answer},
-                        {"role": "user", "content": correction_prompt}
-                    ],
-                    model="llama-3.1-8b-instant",
-                )
+                try:
+                    chat_completion_2 = client.chat.completions.create(
+                        messages=[
+                            {"role": "user", "content": prompt},
+                            {"role": "assistant", "content": answer},
+                            {"role": "user", "content": correction_prompt}
+                        ],
+                        model=settings.LLM_MODEL,
+                    )
+                except Exception as e:
+                    if "404" in str(e) or "not found" in str(e).lower():
+                        print("Primary model failed with 404, trying dynamic fallback in correction loop...")
+                        chat_completion_2 = client.chat.completions.create(
+                            messages=[
+                                {"role": "user", "content": prompt},
+                                {"role": "assistant", "content": answer},
+                                {"role": "user", "content": correction_prompt}
+                            ],
+                            model=get_dynamic_fallback(settings.LLM_MODEL),
+                        )
+                    else:
+                        raise
                 answer = chat_completion_2.choices[0].message.content
                 
             val_result = validate(answer, sources)

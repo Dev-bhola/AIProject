@@ -11,6 +11,7 @@ load_dotenv(dotenv_path=os.path.join("backend", ".env"))
 from backend.app.core.config import settings
 from backend.app.retrieval.search import hybrid_search
 from backend.app.generation.qa import generate_answer
+from backend.app.generation.model_utils import get_dynamic_fallback
 
 def _call_judge(prompt: str) -> str:
     """Calls the configured LLM judge (local Ollama or Groq) and returns the raw response text."""
@@ -29,11 +30,22 @@ def _call_judge(prompt: str) -> str:
         return response.json()['message']['content'].strip()
     else:
         client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-        chat_completion = client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model="llama-3.1-8b-instant",
-            temperature=0.0
-        )
+        try:
+            chat_completion = client.chat.completions.create(
+                messages=[{"role": "user", "content": prompt}],
+                model=settings.LLM_MODEL,
+                temperature=0.0
+            )
+        except Exception as e:
+            if "404" in str(e) or "not found" in str(e).lower():
+                print("Primary judge model failed with 404, trying dynamic fallback...")
+                chat_completion = client.chat.completions.create(
+                    messages=[{"role": "user", "content": prompt}],
+                    model=get_dynamic_fallback(settings.LLM_MODEL),
+                    temperature=0.0
+                )
+            else:
+                raise
         return chat_completion.choices[0].message.content.strip()
 
 def _call_judge_bool(prompt: str, key: str, error_label: str) -> bool | None:

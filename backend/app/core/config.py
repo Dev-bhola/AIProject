@@ -17,5 +17,6 @@ class Settings:
     RRF_K = 60
     ENVIRONMENT = os.environ.get("ENVIRONMENT", "production")
     CORS_ORIGINS = os.environ.get("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
+    LLM_MODEL = os.environ.get("LLM_MODEL", "groq/compound-mini")
 
 settings = Settings()

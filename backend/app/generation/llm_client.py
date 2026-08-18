@@ -4,6 +4,9 @@ import re
 import asyncio
 import time
 
+from backend.app.core.config import settings
+from backend.app.generation.model_utils import get_dynamic_fallback
+
 logger = logging.getLogger(__name__)
 
 def parse_llm_json(response_text: str):
@@ -25,14 +28,23 @@ async def call_llm_with_retries(client, prompt, call_type, call_counter, stats, 
         try:
             kwargs = {
                 "messages": [{"role": "user", "content": prompt}],
-                "model": "llama-3.1-8b-instant",
+                "model": settings.LLM_MODEL,
             }
             if response_format:
                 kwargs["response_format"] = response_format
             if max_tokens:
                 kwargs["max_tokens"] = max_tokens
                 
-            completion = await client.chat.completions.create(**kwargs)
+            try:
+                completion = await client.chat.completions.create(**kwargs)
+            except Exception as e:
+                if "404" in str(e) or "not found" in str(e).lower():
+                    logger.warning(f"[{call_type}] Primary model failed with 404, trying dynamic fallback...")
+                    kwargs["model"] = get_dynamic_fallback(settings.LLM_MODEL)
+                    completion = await client.chat.completions.create(**kwargs)
+                else:
+                    raise
+                    
             duration = time.time() - start_time
             stats[f"{call_type}_durations"].append(duration)
             return completion
